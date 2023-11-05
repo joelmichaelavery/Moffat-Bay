@@ -16,11 +16,10 @@ if ($mysqli->connect_error) {
 
 // SQL statements for inserting data into tables
 $sqlRoomType = "INSERT INTO RoomType (RoomType, RoomPrice) VALUES
-   ('Single', 100.00),
-   ('Double', 150.00),
-   ('Suite', 250.00),
-   ('Twin', 120.00),
-   ('King', 180.00)";
+   ('Double-Full', 115.00),
+   ('Queen', 125.00),
+   ('Double-Queen', 135.00),
+   ('King', 150.00)";
 
 $sqlGuests = "INSERT INTO Guests (FirstName, LastName, Telephone, StreetAddress, City, State, Email, Password, BookingID) VALUES
    ('John', 'Doe', '555-123-4567', '123 Main St', 'New York', 'NY', 'john@example.com', 'password123', 1),
@@ -30,11 +29,11 @@ $sqlGuests = "INSERT INTO Guests (FirstName, LastName, Telephone, StreetAddress,
    ('Bob', 'Brown', '555-555-5555', '222 Cedar St', 'Miami', 'FL', 'bob@example.com', 'passwordxyz', 5)";
 
 $sqlBookings = "INSERT INTO Bookings (CheckInDate, CheckOutDate, NumOfGuests, Price, ReservationNumber, RoomType, GuestID) VALUES
-   ('2023-11-15', '2023-11-20', 2, 300.00, 'RES12345', 'Single', 1),
-   ('2023-11-17', '2023-11-22', 2, 300.00, 'RES54321', 'Single', 2),
-   ('2023-11-20', '2023-11-25', 2, 300.00, 'RES67890', 'Single', 3),
-   ('2023-11-22', '2023-11-27', 2, 300.00, 'RES98765', 'Double', 4),
-   ('2023-11-25', '2023-11-30', 2, 300.00, 'RES13579', 'Double', 5)";
+   ('2023-11-15', '2023-11-20', 2, 575.00, 'RES12345', 'Double-Full', 1),
+   ('2023-11-17', '2023-11-22', 2, 625.00, 'RES54321', 'Queen', 2),
+   ('2023-11-20', '2023-11-25', 2, 575.00, 'RES67890', 'Double-Full', 3),
+   ('2023-11-22', '2023-11-27', 2, 675.00, 'RES98765', 'Double-Queen', 4),
+   ('2023-11-25', '2023-11-30', 2, 750.00, 'RES13579', 'King', 5)";
 
 // Execute SQL statements
 if ($mysqli->query($sqlRoomType) === TRUE) {
