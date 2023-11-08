@@ -5,47 +5,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hero">
+    <div class="navbar">
+        <h1 class="logo">Moffat bay Lodge & Marina </h1>
+        <div class="links"></div>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>            
+            <li>
+                <a href="#">Your Reservation</a>
+            </li>
+    </div>
+    <div class="Registeration">
         <div class="form-box">
-            <div class="button-box">
-                <div id="btn"></div>
-                <button type="button" class="toggle-btn" onclick="login()">Login</button>
-                <button type="button" class="toggle-btn" onclick="register()">Register</button>
-            </div>
-            <div class="social-icons">
-                <form id="Login" class="input-group">
-                    <input type="text" name="login_username" class="input-field" placeholder="User Id" required>
-                    <input type="password" name="login_password" class="input-field" placeholder="Enter Password" required>
-                    <input type="checkbox" class="check-box"><span>Remember Password</span>
-                    <button type="submit" class="submit-btn">Login</button>
-                </form>
-
-                <form id="Register" class="input-group" action="../database/MoffatBayDatabaseCreation.php" method="post">
-                    <input type="text" name="username" class="input-field" placeholder="User Id" required>
-                    <input type="email" name="email" class="input-field" placeholder="Email" required>
-                    <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
-                    <button type="submit" class="submit-btn">Register</button>
-                </form>
-            </div>
+            <img src="/Media/Images/hikin.jpg" class="image" i>     
+       
+            <form id="Register" class="input-group" action="../database/MoffatBayDatabaseCreation.php" method="post">
+                <div class="input">MOFFAT BAY <br> REGISTRATION PAGE</div>    
+                <input type="text" name="FirstName" class="input-field" placeholder="FirstName" required>
+                <input type="text" name="LastName" class="input-field" placeholder="LastName" required>
+                <input type="email" name="email" class="input-field" placeholder="Email" required>
+                <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+                <input type="number" name="Telephone" class="input-field" placeholder="Enter Telephone Number" required>
+                <input type="text" name="StreetAddress" class="input-field" placeholder="StreetAddress" required>
+                <input type="text" name="City" class="input-field" placeholder="City" required>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
         </div>
     </div>
+</div>
 
-    <script>
-        var x = document.getElementById("Login");
-        var y = document.getElementById("Register");
-        var z = document.getElementById("btn");
-
-        function register(){
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
-        }
-
-        function login(){
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0";
-        }
-    </script>
 </body>
 </html>
