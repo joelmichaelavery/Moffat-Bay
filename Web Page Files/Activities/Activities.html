@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="home_css.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
         <title>Moffat Bay Activities</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
-                background-color: #006400; /* Deeper green background */
+                font-family: Arial, Garamond;
+                background-color: #374d37; /* Primary color of the page */ 
                 margin: 0;
                 padding: 0;
             }
@@ -48,14 +53,81 @@
                 cursor: pointer;
             }
             button:hover {
-                background-color: #00589c; /* Darker blue on hover */
+                text-decoration: underline; /* Add underline on hover */
+                color: #FF5733; /* Change color on hover */
             }
+
             footer {
+                background-color: #26a5b5;
+                /* Teal background color */
+                color: white;
+                padding: 30px 0;
+                margin-top: auto;
+                text-align: center;
+            }
+    
+            .footer-content {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+                /* Increase the gap for more spacing */
+            }
+    
+            .footer-section-info {
+                /* Adjust the width to create spacing */
+                box-sizing: border-box;
+                text-align: center;
+                width: 40%;
+                /* Adjust the width as needed */
+            }
+    
+            .footer-section {
+                /* Adjust the width to create spacing */
+                box-sizing: border-box;
+                text-align: center;
+                width: 60%;
+                /* Adjust the width as needed */
+            }
+    
+            .footer-section h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+    
+            .footer-section p {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+    
+            .footer-section ul {
+                list-style: none;
+                padding: 0;
+            }
+    
+            .footer-section ul li {
+                margin-bottom: 15px;
+                /* Increase the margin for more spacing */
+                text-align: center;
+                /* Center the text */
+            }
+    
+            .footer-section ul li a {
+                color: white;
+                text-decoration: none;
+            }
+    
+            .footer-bottom {
                 text-align: center;
                 margin-top: 20px;
-                background-color: #f0f0f0;
-                padding: 10px;
-                color: #333; /* Dark gray text for the footer */
+                padding-top: 10px;
+                border-top: 1px solid #555;
+            }
+    
+            .footer-bottom p {
+                font-size: 12px;
             }
         </style>
     </head>
@@ -64,20 +136,20 @@
 <h1 style="text-align: center;">Moffat Bay Activities</h1>
 
 <div class="activity-container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
+    <div class="activity" style="width:50%; margin: 10px; text-align: center;">
         <img src="../Media/Images/moran_state_park_orcas_island_robert_harrison_6-2800x800.jpg" alt="Hiking" style="max-width: 100%; height: auto;">
         <h2>Hiking</h2>
         <p>Embark on a journey through the picturesque landscapes of the Pacific Northwest. Explore rugged trails that lead to awe-inspiring views of the sea, majestic mountains, and lush valleys, creating an unforgettable hiking experience.</p>
     </div>     
         
     <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-    <img src="../Media/Images/Kayaking.jpg" alt="Kayaking" style="max-width: 100%; height: auto;">
+    <img src="../Media/Images/Kayaking3.jpg" alt="Kayaking" style="max-width: 100%; height: auto;">
         <h2>Kayaking</h2>
         <p>Embark on an unforgettable adventure as you paddle the pristine waters of Puget Sound. Keep your eyes peeled, for you might just find yourself face-to-face with our resident orca whales.</p>
     </div>
     
     <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-    <img src="../Media/Images/Scuba-Diving-San-Juan-Islands-Seattle-yacht-charters-daily.jpg" alt="Scuba" style="max-width: 100%; height: auto;">
+    <img src="../Media/Images/Scuba.jpg" alt="Scuba" style="max-width: 100%; height: auto;">
         <h2>Scuba Diving</h2>
         <p>Descend beneath the waves to explore the hidden wonders of the Sound. Encounter playful sea otters, graceful harbor seals, mysterious octopuses, and a host of other aquatic marvels in their natural habitat.</p>
     </div>
@@ -109,12 +181,56 @@
 
 </div>
 <div style="text-align: center; margin-top: 20px;">
-    <a href="home.html" style="text-decoration: none;">
+    <a href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" style="text-decoration: none;">
         <button style="padding: 10px 20px; font-size: 16px; background-color: #0074cc; color: #fff; border: none; cursor: pointer;">Back to Home</button>
     </a>
 </div>
-<footer style="text-align: center; margin-top: 20px; background-color: #f0f0f0; padding: 10px;">
-    &copy; 2023 Moffat Bay  | <a href=".html">Contact Us</a> | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a>
+<footer> 
+    <div class="footer-content">
+        <div class="footer-section-info">
+            <p>insert address,
+                Joviedsa,
+                WA 98250</p>
+            <p>info@moffatbay.com</p>
+            <p>223-555-5555</p>
+        </div>
+
+        <div class="footer-section">
+
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="../AboutUs/AboutUs.html">Discover the beauty of Moffat Bay Resort, where nature meets
+                        luxury.</a></li>
+            </ul>
+
+
+        </div>
+        <div class="footer-section">
+            <h3>Activities</h3>
+            <ul>
+                <li><a href="../Activities/Activities.html">Check Out What We have to Offer!</a></li>
+
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Reservations</h3>
+            <ul>
+                <li><a href="../RoomReservation/">Book Now</a></li>
+                <li><a href="../Reservation lookup/Moffat Bay Reservation Look-up.html">Reservation Look up</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Account</h3>
+            <ul>
+                <li><a href="../LoginPage/LoginServlet.java">Login</a></li>
+                <li><a href="../Registration/includes/signupregistration.html">Create an Account</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Moffat Bay Resort | <a href="../AboutUs/AboutUs.html">About Us</a> | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy.</p>
+    </div>
 </footer>
 </body>
 </html>
