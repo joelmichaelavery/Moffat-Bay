@@ -28,20 +28,20 @@
     
     <div class="border-box">
         <div class="sub-box sub-box1">
-            <img src="cabin1.webp" alt="Moffat Bay Lodge">
+            <img src="cabin1.webp" alt="Moffat Bay Lodge"style="max-width: 100%; height: auto;">
         </div>
         <div class="sub-container-right">
             <div class="sub-box sub-box2">
-                <img src="cabin2.webp" alt="Cabin2">
+                <img src="cabin2.webp" alt="Cabin2"style="max-width: 100%; height: auto;">
             </div>
             <div class="sub-box sub-box3">
-                <img src="cabin3.webp" alt="Cabin3">
+                <img src="cabin3.webp" alt="Cabin3"style="max-width: 100%; height: auto;">
             </div>
             <div class="sub-box sub-box4">
-                <img src="cabin4.webp" alt="Cabin4">
+                <img src="cabin4.webp" alt="Cabin4"style="max-width: 100%; height: auto;">
             </div>
             <div class="sub-box sub-box5">
-                <img src="cabin5.webp" alt="Cabin5">
+                <img src="cabin5.webp" alt="Cabin5"style="max-width: 100%; height: auto;">
             </div>
         </div>
     </div>
