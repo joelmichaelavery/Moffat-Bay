@@ -15,10 +15,10 @@
         <nav>
             <ul>
                 <!-- Navigation links to various pages -->
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="ReservationLookUp.html">Your Reservation</a></li>
-                <li class="create-account"><a class="nav-link" href="signupregistration.html">Create Account</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../AboutUs/AboutUs.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Reservation lookup/Moffat Bay Reservation Look-up.html">Your Reservation</a></li>
+                <li class="create-account"><a class="nav-link" href="../Registration/includes/signupregistration.html">Create Account</a></li>
                     
             </ul>
         </nav>
@@ -28,20 +28,20 @@
     
     <div class="border-box">
         <div class="sub-box sub-box1">
-            <img src="cabin1.webp" alt="Moffat Bay Lodge"style="max-width: 100%; height: auto;">
+            <img src="../Media/Images/cabin1.jpg" alt="Moffat Bay Lodge"style="max-width: 100%; height: auto;">
         </div>
         <div class="sub-container-right">
             <div class="sub-box sub-box2">
-                <img src="cabin2.webp" alt="Cabin2"style="max-width: 100%; height: auto;">
+                <img src="../Media/Images/cabin2.jpg" alt="Cabin2"style="max-width: 100%; height: auto;">
             </div>
             <div class="sub-box sub-box3">
-                <img src="cabin3.webp" alt="Cabin3"style="max-width: 100%; height: auto;">
+                <img src="../Media/Images/cabin3.jpg" alt="Cabin3"style="max-width: 100%; height: auto;">
             </div>
             <div class="sub-box sub-box4">
-                <img src="cabin4.webp" alt="Cabin4"style="max-width: 100%; height: auto;">
+                <img src="../Media/Images/cabin4.jpg" alt="Cabin4"style="max-width: 100%; height: auto;">
             </div>
             <div class="sub-box sub-box5">
-                <img src="cabin5.webp" alt="Cabin5"style="max-width: 100%; height: auto;">
+                <img src="../Media/Images/cabin5.jpg" alt="Cabin5"style="max-width: 100%; height: auto;">
             </div>
         </div>
     </div>
