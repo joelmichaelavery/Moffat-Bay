@@ -1,144 +1,229 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="home_css.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-        <title>Moffat Bay Activities</title>
-        <style>
-            body {
-                font-family: Arial, Garamond;
-                background-color: #374d37; /* Primary color of the page */ 
-                margin: 0;
-                padding: 0;
-            }
-            h1 {
-                font-size: 50px;
-                text-align: center;
-                color: #fff; /* White text on deep green background */
-            }
-            .activity-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-            }
-            .activity {
-                width: auto;
-                margin: 10px;
-                text-align: center;
-                background-color: #fff; /* White activity cards */
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            }
-            h2 {
-                font-size: 24px;
-                color: #006400; /* Dark green text for headings */
-            }
-            p {
-                font-size: 16px;
-                color: #000000;
-            }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Landing(Home)Page/Moffat Bay Landing Page CSS.css">
+  <title>Moffat Bay - Welcome!</title>
+  <style>
+    body {
+      font-family: Arial, Garamond;
+      background-color: #374d37;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      flex: 1;
+    }
 
-            p2 {
-                font-size: 16px;
-                color: #fff;
-            }
-            a {
-                text-decoration: none;
-            }
-            button {
-                padding: 10px 20px;
-                font-size: 16px;
-                background-color: #0074cc; /* Blue button */
-                color: #fff;
-                border: none;
-                cursor: pointer;
-            }
-            button:hover {
-                text-decoration: underline; /* Add underline on hover */
-                color: #FF5733; /* Change color on hover */
-            }
+    footer {
+      background-color: #001F3F;
+      color: white;
+      padding: 5px 0;
+      text-align: center;
+      width: 100%;
+    }
 
-            footer {
-                background-color: #001F3F ;
-            /* Dark Blue background color- represents the dark waters of the sound */
-                color: white;
-                padding: 30px 0;
-                margin-top: auto;
-                text-align: center;
-            }
-    
-            .footer-content {
-                max-width: 1200px;
-                margin: 0 auto;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                gap: 40px;
-                /* Increase the gap for more spacing */
-            }
-    
-            .footer-section-info {
-                /* Adjust the width to create spacing */
-                box-sizing: border-box;
-                text-align: center;
-                width: 40%;
-                /* Adjust the width as needed */
-            }
-    
-            .footer-section {
-                /* Adjust the width to create spacing */
-                box-sizing: border-box;
-                text-align: center;
-                width: 60%;
-                /* Adjust the width as needed */
-            }
-    
-            .footer-section h3 {
-                font-size: 18px;
-                margin-bottom: 10px;
-            }
-    
-            .footer-section p {
-                font-size: 14px;
-                margin-bottom: 10px;
-            }
-    
-            .footer-section ul {
-                list-style: none;
-                padding: 0;
-            }
-    
-            .footer-section ul li {
-                margin-bottom: 15px;
-                /* Increase the margin for more spacing */
-                text-align: center;
-                /* Center the text */
-            }
-    
-            .footer-section ul li a {
-                color: white;
-                text-decoration: none;
-            }
-    
-            .footer-bottom {
-                text-align: center;
-                margin-top: 20px;
-                padding-top: 10px;
-                border-top: 1px solid #555;
-            }
-    
-            .footer-bottom p {
-                font-size: 12px;
-            }
-        </style>
-    </head>
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-section-info,
+    .footer-section {
+      box-sizing: border-box;
+      text-align: center;
+      width: 100%;
+      max-width: 20%;
+      margin-bottom: 20px;
+    }
+
+    .footer-section h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-decoration: underline;
+      color: #87CEEB;
+    }
+
+    .footer-section p {
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-align: left;
+      color: white;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+      text-align: left;
+      color: white;
+    }
+
+    .footer-section ul li a {
+      color: white;
+      text-align: left;
+      text-decoration: none;
+    }
+
+    .footer-section a {
+      text-decoration: underline;
+      color: #87CEEB;
+    }
+
+    .footer-bottom {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #555;
+    }
+
+    .footer-bottom p {
+      font-size: 10px;
+      color: white;
+    }
+
+    .Landing-Page-Images-Container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .Logo-Name {
+      font-family: 'Lora', serif;
+      color: tan;
+      text-align: center;    
+    }
+
+    .Landing-Page-Banner {
+      background-color: #41240d;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .Logo-Image-Left img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .LogoName {
+      border-top: 0px;
+      font-size: 36px;
+    }
+
+    .Landing-Nav-Menu {
+      text-align: center;
+      width: 600px;
+      height: 50px;
+      margin: 20px auto;
+      background-color: rgba(103, 170, 182, 0.5);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      align-items: center;
+    }
+
+    .Landing-Nav-Menu h2 {
+      display:inline-block;
+      text-align: center;
+      margin-right: 20px;
+      padding: 0px;
+      margin-top: 10px;
+      color: #e9b45a;
+      text-decoration: underline;
+    }
+
+    .Landing-Nav-Menu h2 a {
+      text-decoration: none;
+      color: #e9b45a;
+    }
+
+    .Landing-Nav-Menu h2 a:hover {
+      text-decoration: underline;
+      color: #FF5733;
+    }
+
+    #Landing-Intro {
+      color: #e9b45a;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    /* New styles for login form */
+    .login-form {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: clear;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .login-input {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #e9b45a;
+      border-radius: 5px;
+      width: 100px;
+    }
+
+    .login-button {
+      background-color: rgba(103, 170, 182, 0.5);
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
 <body>
+  <header class="Landing-Page-Banner">
+    <div class="Logo-Container">
+      <div class="Logo-Image-Left">
+        <img src="https://cdn.discordapp.com/attachments/1156321354669379707/1175168706612056164/SalishSalmon_left.jpg?ex=656a4025&is=6557cb25&hm=8f1499cb4a9dd69d7eff7cad8783127ebb35aa3d57733996b295bd8933b9c328&" alt="Left Image">
+      </div>
+      <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+      <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
+    </div>
 
-<h1 style="text-align: center;">Moffat Bay Activities</h1>
+    
+    <div class="login-form">
+      <input type="email" class="login-input" placeholder="Email">
+      <input type="password" class="login-input" placeholder="Password">
+      <button class="login-button"><strong>Log In</strong></button>
+    </div>
+  </header>
+
+  <div class="Landing-Nav-Menu">
+    <a id="About Us Link" href="../AboutUs/AboutUs.html" target="_self">
+      <h2 id="About Us Label">About Us</h2>
+    </a>
+    
+    <a id ="Contact Us Link" href="../Activities/Activities.html" target="_self">
+      <h2 id="Activities Label">Activities</h2>
+    </a>
+    
+    <a id="Your Reservation Link" href="../Reservation lookup/Moffat Bay Reservation Look-up.html" target="_self">
+      <h2 id="Your Reservation Label">Reservations</h2>
+    </a>
+
+    <a id="Account Link" href="../Account/Account.html" target="_self">
+      <h2 id="Account">Account</h2>
+    </a>
+  </div>
 
 <div class="activity-container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
     <div class="activity" style="width:50%; margin: 10px; text-align: center;">
@@ -193,11 +278,11 @@
 <footer> 
     <div class="footer-content">
         <div class="footer-section-info">
-            <p2>88 Moffat Loop,
+            <p>88 Moffat Loop,
                 Joviedsa Island,
                 WA 98250</p>
-            <p2>info@moffatbay.com</p>
-            <p2>223-867-5309</p>
+            <p>info@moffatbay.com</p>
+            <p>223-867-5309</p>
         </div>
 
         <div class="footer-section">
