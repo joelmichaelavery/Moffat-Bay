@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <title>About Moffat Bay Lodge</title>
     <style>
+
+        
         body {
             font-family: Arial, Garamond;
             background-color: #374d37; /* Primary color of the page */ 
@@ -27,7 +29,7 @@
 
         }
 
-        h2 {
+        h3 {
             font-size: 36px;
             text-align: center;
 
@@ -46,100 +48,221 @@
             line-height: 1.6;
         }
         footer {
-            background-color: #001F3F ;
-            /* Dark Blue background color- represents the dark waters of the sound */
+            background-color: #001F3F;
             color: white;
-            padding: 30px 0;
-            margin-top: auto;
+            padding: 5px 0;
             text-align: center;
-        }
-
-        .footer-content {
+            width: 100%;
+          }
+      
+          .footer-content {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
-            /* Increase the gap for more spacing */
-        }
-
-        .footer-section-info {
-            /* Adjust the width to create spacing */
+          }
+      
+          .footer-section-info,
+          .footer-section {
             box-sizing: border-box;
             text-align: center;
-            width: 40%;
-            /* Adjust the width as needed */
-        }
-
-        .footer-section {
-            /* Adjust the width to create spacing */
-            box-sizing: border-box;
-            text-align: center;
-            width: 60%;
-            /* Adjust the width as needed */
-        }
-
-        .footer-section h3 {
-            font-size: 18px;
+            width: 100%;
+            max-width: 20%;
+            margin-bottom: 20px;
+          }
+      
+          .footer-section h3 {
+            font-size: 16px;
             margin-bottom: 10px;
-        }
-
-        .footer-section p {
-            font-size: 14px;
+            text-decoration: underline;
+            color: #87CEEB;
+          }
+      
+          .footer-section p {
+            font-size: 12px;
             margin-bottom: 10px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 15px;
-            /* Increase the margin for more spacing */
-            text-align: center;
-            /* Center the text */
-        }
-
-        .footer-section ul li a {
+            text-align: left;
             color: white;
+          }
+      
+          .footer-section ul li {
+            margin-bottom: 10px;
+            text-align: left;
+            color: white;
+          }
+      
+          .footer-section ul li a {
+            color: white;
+            text-align: left;
             text-decoration: none;
-        }
-
-        .footer-bottom {
+          }
+      
+          .footer-section a {
+            text-decoration: underline;
+            color: #87CEEB;
+          }
+      
+          .footer-bottom {
+            width: 100%;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
             padding-top: 10px;
             border-top: 1px solid #555;
-        }
-
-        .footer-bottom p {
-            font-size: 12px;
-        }
+          }
+      
+          .footer-bottom p {
+            font-size: 10px;
+            color: white;
+          }
+          .Logo-Name {
+            font-family: 'Lora', serif;
+            color: tan;
+            text-align: center;    
+          }
+      
+          .Landing-Page-Banner {
+            background-color: #41240d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+          }
+      
+          .Logo-Image-Left img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+          }
+      
+          .LogoName {
+            border-top: 0px;
+            font-size: 36px;
+          }
+      
+          .Landing-Nav-Menu {
+            text-align: center;
+            width: 600px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: rgba(103, 170, 182, 0.5);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+          }
+      
+          .Landing-Nav-Menu h2 {
+            display:inline-block;
+            text-align: center;
+            margin-right: 20px;
+            padding: 0px;
+            margin-top: 10px;
+            color: #e9b45a;
+            text-decoration: underline;
+          }
+      
+          .Landing-Nav-Menu h2 a {
+            text-decoration: none;
+            color: #e9b45a;
+          }
+      
+          .Landing-Nav-Menu h2 a:hover {
+            text-decoration: underline;
+            color: #FF5733;
+          }
+      
+          #Landing-Intro {
+            color: #e9b45a;
+            text-align: center;
+            font-family: 'Lora', serif;
+            font-size: 20px;
+            padding: 10px;
+          }
+      
+          /* New styles for login form */
+          .login-form {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: clear;
+            padding: 20px;
+            border-radius: 10px;
+          }
+      
+          .login-input {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #e9b45a;
+            border-radius: 5px;
+            width: 100px;
+          }
+      
+          .login-button {
+            background-color: rgba(103, 170, 182, 0.5);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>About Moffat Bay Lodge</h1>
-</header>
+    <header class="Landing-Page-Banner">
+        <div class="Logo-Container">
+          <div class="Logo-Image-Left">
+            <img src="https://cdn.discordapp.com/attachments/1156321354669379707/1175168706612056164/SalishSalmon_left.jpg?ex=656a4025&is=6557cb25&hm=8f1499cb4a9dd69d7eff7cad8783127ebb35aa3d57733996b295bd8933b9c328&" alt="Left Image">
+          </div>
+          <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+          <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
+        </div>
+    
+        
+        <div class="login-form">
+          <input type="email" class="login-input" placeholder="Email">
+          <input type="password" class="login-input" placeholder="Password">
+          <button class="login-button"><strong>Log In</strong></button>
+        </div>
+      </header>
+    
+      <div class="Landing-Nav-Menu">
+        <a id="About Us Link" href="../AboutUs/AboutUs.html" target="_self">
+          <h2 id="About Us Label">About Us</h2>
+        </a>
+        
+        <a id ="Contact Us Link" href="../Activities/Activities.html" target="_self">
+          <h2 id="Activities Label">Activities</h2>
+        </a>
+        
+        <a id="Your Reservation Link" href="../Reservation lookup/Moffat Bay Reservation Look-up.html" target="_self">
+          <h2 id="Your Reservation Label">Reservations</h2>
+        </a>
+    
+        <a id="Account Link" href="../Account/Account.html" target="_self">
+          <h2 id="Account">Account</h2>
+        </a>
+      </div>
 
 <div class="container">
-    <h2>Our Story</h2>
+    <h3>Our Story</h3>
     <p>Moffat Bay Lodge is a hidden gem of the First Nations nestled in the heart of the Pacific Northwest. <br>With a history dating back over a century, we have been providing a unique and unforgettable experience for nature enthusiasts, adventurers, and those seeking tranquility. <br>To learn more about the First Nations <a href="https://archive.ncai.org/" target="_blank" rel="noopener noreferrer"> Click Here</a>. </p>
     <img src="../Media/Images/tribe1.jpg" alt="History" style="max-width: 100%; height: auto;">
 
-    <h2>Our Location</h2>
+    <h3>Our Location</h3>
     <p>Located 3.5 hours by car and ferry on the picturesque Joviedsa Island in the San Juan Islands of Puget Sound, our lodge offers breathtaking views of the sea, rugged mountains, and lush valleys. <br>The surrounding natural beauty sets the stage for a wide range of outdoor activities and adventures.</p>
     <img src="../Media/Images/sj-islands-map.jpg" alt="Map" style="max-width: 100%; height: auto;">
 
-    <h2>Our Mission</h2>
+    <h3>Our Mission</h3>
     <p>At Moffat Bay Lodge, our mission is to create an oasis of serenity and adventure, where guests can connect with nature, explore the outdoors, and create lasting memories. <br>We're dedicated to preserving the environment, providing exceptional hospitality, and sharing the wonders of this unique island.</p>
     <img src="../Media/Images/Explore.jpg" alt="Explore" style="max-width: 100%; height: auto;">
 
-    <h2>Contact Us</h2>
-    <p>If you have any questions or would like to book a stay with us, please don't hesitate to <a href="../ContactUsPage/contactus.html">contact us</a>. <br>We're here to make your stay at Moffat Bay Lodge an extraordinary experience.</p>
+    <h3>Contact Us</h3>
+    <p>If you have any questions or would like to book a stay with us, please don't hesitate to contact us using the form below. <br>We're here to make your stay at Moffat Bay Lodge an extraordinary experience.</p>
     <img src="../Media/Images/reception.jpg" alt="Reception" style="max-width: 100%; height: auto;">
 
 </div>
@@ -169,7 +292,7 @@
         <aside class="sidebar">
             <div class="wrap">
                 <h2>Get in touch</h2>
-                <p class="desc">We love to hear from you. Our friendly team is always here to chat.</p>
+                <p class="desc">We love to hear from you. <br>Our friendly team is always here to chat.</p>
                 <div class="contact-info">
                     <div class="item"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
                     <h4 class="mail">Chat to us</h4>
@@ -183,7 +306,7 @@
                     <div class="item">
                         <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
                         <h4 class="call">Phone</h4>
-                        <p>Mon-Fri from 9am to 5pm. <span>223-867-5309</span></p>
+                        <p>Mon-Fri from 9 A.M. to 5 P.M. Pacific Standard Time. <span>223-867-5309</span></p>
                     </div>
                 </div>
 
@@ -198,44 +321,50 @@
         <button style="padding: 10px 20px; font-size: 16px; background-color: #032e4f; color: #fff; border: none; cursor: pointer;">Back to Home Page</button>
     </a>
 </div>
-<footer> 
+<footer>
     <div class="footer-content">
+      <div class="footer-section-info">
+        <p>88 Moffat Loop,
+          Joviedsa Island,
+          WA 98250</p>
+        <p>info@moffatbay.com</p>
+        <p>223-867-5309</p>
+      </div>
 
-        <div class="footer-section">
+      <div class="footer-section">
+        <h3><a href="../AboutUs/AboutUs.html">About Us</a></h3>
+        <ul>
+          <li>Discover the beauty of Moffat Bay, where nature meets luxury.</li>
+        </ul>
+      </div>
 
-            <h3><a href="../AboutUs/AboutUs.html">About Us</a></h3>
-            <ul>
-                <li>Discover the beauty of Moffat Bay, where nature meets luxury.</li>
-            </ul>
+      <div class="footer-section">
+        <h3><a href="../Activities/Activities.html">Activities</a></h3>
+        <ul>
+          <li>Check Out What We have to Offer!</li>
+        </ul>
+      </div>
 
+      <div class="footer-section">
+        <h3><a href="../RoomReservation/">Reservations</a></h3>
+        <ul>
+          <li><a href="../RoomReservation/">Book Now</a></li>
+          <li><a href="../Reservation lookup/Moffat Bay Reservation Look-up.html">Reservation Look up</a></li>
+        </ul>
+      </div>
 
-        </div>
-        <div class="footer-section">
-            <h3><a href="../Activities/Activities.html">Activities</a></h3>
-            <ul>
-                <li>Check Out What We have to Offer!</li>
-
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Reservations</h3>
-            <ul>
-                <li><a href="../RoomReservation/">Book Now</a></li>
-                <li><a href="../Reservation lookup/Moffat Bay Reservation Look-up.html">Reservation Look up</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Account</h3>
-            <ul>
-                <li><a href="../LoginPage/login.jsp">Login</a></li>
-                <li><a href="../Registration/includes/signupregistration.html">Create an Account</a></li>
-            </ul>
-        </div>
-
+      <div class="footer-section">
+        <h3><a href="../LoginPage/login.jsp">Account</a></h3>
+        <ul>
+          <li><a href="../LoginPage/login.jsp">Login</a></li>
+          <li><a href="../Registration/includes/signupregistration.html">Create an Account</a></li>
+        </ul>
+      </div>
     </div>
+
     <div class="footer-bottom">
-        <p>&copy; 2023 Moffat Bay Resort | <a href="../AboutUs/AboutUs.html">About Us</a> | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy.</p>
+      <p>&copy; 2023 Moffat Bay Resort | <a href="../AboutUs/AboutUs.html">About Us</a> | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy.</p>
     </div>
-</footer>
+  </footer>
 </body>
 </html>
