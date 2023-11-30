@@ -1,5 +1,4 @@
-
-        body {
+         body {
             font-family: Arial, Garamond;
             background-color: #374d37; /* Primary color of the page */ 
             margin: 0;
@@ -10,7 +9,7 @@
             color: tan;
             text-align: center;    
         }
-        .Landing.Page.Banner {
+        .Landing-Page-Banner {
             background-color: #41240d; /* To compliment the primary color */
             color: #fff;
             text-align: center;
@@ -19,12 +18,6 @@
             flex-direction: column;
             align-items: center;
 
-        }
-        .Logo-Image-Left img {
-            width: 60px; /* Set the desired width of the logo image */
-            height: 60px; /* Maintain the aspect ratio */
-            border-radius: 50%; /* Make the logo image circular */
-            margin-bottom: 10px; /* Add some space between the logo image and the Logo-Name */
         }
         .LogoName {
             border-top: 0px;
@@ -68,7 +61,8 @@
           }
 
         footer {
-
+            position: fixed;
+            bottom: 0;
             width: 100%;
             text-align: center;
             padding: 10px;
