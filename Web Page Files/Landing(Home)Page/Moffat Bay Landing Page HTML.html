@@ -16,13 +16,16 @@
       min-height: 100vh;
       flex: 1;
     }
-
+    main {
+      flex: 1;
+}
     footer {
       background-color: #001F3F;
       color: white;
       padding: 5px 0;
       text-align: center;
       width: 100%;
+      position: relative;
     }
 
     .footer-content {
@@ -90,7 +93,8 @@
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-      margin-bottom: 50px;
+      align-items: flex-start;
+      margin: 0 auto 50px;
     }
 
     .Landing-Page-pic-1,
@@ -98,6 +102,7 @@
     .Landing-Page-pic-3 {
       max-width: 600px;
       height: auto;
+      width: 100%;
       margin: 10px;
       border-radius: 10px;
       opacity: 80%;
@@ -121,10 +126,10 @@
     }
 
     .Logo-Image-Left img {
-      width: 60px;
-      height: 60px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .LogoName {
@@ -203,7 +208,7 @@
   <header class="Landing-Page-Banner">
     <div class="Logo-Container">
       <div class="Logo-Image-Left">
-        <img src="https://cdn.discordapp.com/attachments/1156321354669379707/1175168706612056164/SalishSalmon_left.jpg?ex=656a4025&is=6557cb25&hm=8f1499cb4a9dd69d7eff7cad8783127ebb35aa3d57733996b295bd8933b9c328&" alt="Left Image">
+        <img src="https://cdn.discordapp.com/attachments/1156321354669379707/1179795154899578895/MoffatBayLogo.png?ex=657b14dc&is=65689fdc&hm=72905f0998b9a603ed913c58680cf9699de5a8afc4a250510f934b4ead4c2fd9&" alt="Left Image">
       </div>
       <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
       <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
@@ -300,27 +305,6 @@
     <div class="footer-bottom">
       <p>&copy; 2023 Moffat Bay Resort | <a href="../AboutUs/AboutUs.html">About Us</a> | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy.</p>
     </div>
-  </footer>
-
-  <script>
-const images = document.querySelectorAll('.Landing-Page-pic');
-let currentImageIndex = 0;
-
-function showNextImage() {
-    const nextImageIndex = (currentImageIndex + 3) % images.length;
-
-    // Add class to the current image to make it active
-    images[currentImageIndex].classList.remove('active');
-    images[nextImageIndex].classList.add('active');
-
-    currentImageIndex = nextImageIndex;
-}
-
-// Set the first image as active initially
-images[currentImageIndex].classList.add('active');
-
-setInterval(showNextImage, 4000); // Change image every 4 seconds
-</script>
-  
+  </footer> 
 </body>
 </html>
