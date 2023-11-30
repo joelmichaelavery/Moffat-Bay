@@ -89,24 +89,40 @@
       color: white;
     }
 
-    .Landing-Page-Images-Container {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      margin: 0 auto 50px;
-    }
+.Landing-Page-Images-Container {
+  position: relative;
+  height: 600px; /* Set a fixed height for the container */
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  margin:0 auto; 
+  width: 50%;
+}
 
-    .Landing-Page-pic-1,
-    .Landing-Page-pic-2,
-    .Landing-Page-pic-3 {
-      max-width: 600px;
-      height: auto;
-      width: 100%;
-      margin: 10px;
-      border-radius: 10px;
-      opacity: 80%;
-    }
+.Landing-Page-Images-Container img {
+  max-width: 100%;
+  height: 550px;
+  display: inline-block;
+}
+
+.Landing-Page-pic {
+  position: absolute;
+  border-radius: 10px; /* Set the border-radius for rounded edges */
+  align-items: center;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.Landing-Page-pic:first-child {
+  opacity: 1;
+}
 
     .Logo-Name {
       font-family: 'Lora', serif;
@@ -251,15 +267,28 @@
 
   <main class="content">
     <div class="Landing-Page-Images-Container">
-      <img class="Landing-Page-pic Landing-Page-pic-1 Landing-Page-pic-horizontal" src="https://ssl.tzoo-img.com/images/blog/2019/9/24/Lake-Coeur-d'Alene-Idaho-iStock-505413264.jpg?width=412&spr=3" alt="Landing-Page-pic-1">
-      <img class="Landing-Page-pic Landing-Page-pic-2 Landing-Page-pic-horizontal" src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_4500,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/The_Spa_dhz4en.jpg" alt="Landing-Page-pic-2">
-      <img class="Landing-Page-pic Landing-Page-pic-3 Landing-Page-pic-horizontal" src="https://tuckerharrisoninn.com/wp-content/uploads/2022/07/shutterstock_691702915.jpg" alt="Landing-Page-pic-3">
+      <div id ="slideshow" class="Landing-Page-Images-Container">
+        <img class="Landing-Page-pic Landing-Page-pic-1" src="https://ssl.tzoo-img.com/images/blog/2019/9/24/Lake-Coeur-d'Alene-Idaho-iStock-505413264.jpg?width=412&spr=3" alt="Landing-Page-pic-1">
+        <img class="Landing-Page-pic Landing-Page-pic-2" src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_4500,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/The_Spa_dhz4en.jpg" alt="Landing-Page-pic-2">
+        <img class="Landing-Page-pic Landing-Page-pic-3" src="https://tuckerharrisoninn.com/wp-content/uploads/2022/07/shutterstock_691702915.jpg" alt="Landing-Page-pic-3">
+        <img class="Landing-Page-pic Landing-Page-pic-4" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Five-Pine-Lodge.jpg" alt="Landing-Page-pic-4">
+        <img class="Landing-Page-pic Landing-Page-pic-5" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Shore-Lodge.png" alt="Landing-Page-pic-5">
+        <img class="Landing-Page-pic Landing-Page-pic-6" src="https://waggonerguide.com/wp-content/uploads/2021/03/Kwatsi-BO-e1617133112388.jpg" alt="Landing-Page-pic-6">
+      </div>
 
-      <img class="Landing-Page-pic Landing-Page-pic-4" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Five-Pine-Lodge.jpg" alt="Landing-Page-pic-4">
-      <img class="Landing-Page-pic Landing-Page-pic-5" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Shore-Lodge.png" alt="Landing-Page-pic-5">
-      <img class="Landing-Page-pic Landing-Page-pic-6" src="https://waggonerguide.com/wp-content/uploads/2021/03/Kwatsi-BO-e1617133112388.jpg" alt="Landing-Page-pic-6">
+  
+    
+      <div id="slideshow2" class="Landing-Page-Images-Container">
+        <!-- Duplicate the same images for the second slideshow -->
+        <img class="Landing-Page-pic Landing-Page-pic-1" src="https://ssl.tzoo-img.com/images/blog/2019/9/24/Lake-Coeur-d'Alene-Idaho-iStock-505413264.jpg?width=412&spr=3" alt="Landing-Page-pic-1">
+        <img class="Landing-Page-pic Landing-Page-pic-2" src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_4500,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/The_Spa_dhz4en.jpg" alt="Landing-Page-pic-2">
+        <img class="Landing-Page-pic Landing-Page-pic-3" src="https://tuckerharrisoninn.com/wp-content/uploads/2022/07/shutterstock_691702915.jpg" alt="Landing-Page-pic-3">
+        <img class="Landing-Page-pic Landing-Page-pic-4" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Five-Pine-Lodge.jpg" alt="Landing-Page-pic-4">
+        <img class="Landing-Page-pic Landing-Page-pic-5" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Shore-Lodge.png" alt="Landing-Page-pic-5">
+        <img class="Landing-Page-pic Landing-Page-pic-6" src="https://waggonerguide.com/wp-content/uploads/2021/03/Kwatsi-BO-e1617133112388.jpg" alt="Landing-Page-pic-6">
     </div>
-  </main>
+  </div>
+</main>
 
   <footer>
     <div class="footer-content">
@@ -307,4 +336,41 @@
     </div>
   </footer> 
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get the image container and all images
+    const slideshow = document.getElementById('slideshow');
+    const images = slideshow.getElementsByClassName('Landing-Page-pic');
+
+    // Set the index of the current image
+    let currentIndex = 0;
+
+    // Function to show the next image
+    function showNextImage() {
+      images[currentIndex].style.opacity = 0;
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.opacity = 1;
+    }
+
+    // Set an interval to switch images every 6 seconds
+    setInterval(showNextImage, 6000);
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slideshow2 = document.getElementById('slideshow2');
+    const images2 = slideshow2.getElementsByClassName('Landing-Page-pic');
+    let currentIndex2 = 0;
+
+    function showNextImage2() {
+      images2[currentIndex2].style.opacity = 0;
+      currentIndex2 = (currentIndex2 + 1) % images2.length;
+      images2[currentIndex2].style.opacity = 1;
+    }
+
+    setInterval(showNextImage2, 5000); // You can adjust the interval for the second slideshow
+  });
+</script>
+
 </html>
