@@ -1,3 +1,11 @@
+<!---
+Joel Avery
+Andrew Danielson
+Tabark Kambal
+Gabriel Pedraza Torres
+CSD 460 - Software Development CAPSTONE
+--->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="home_css.css">

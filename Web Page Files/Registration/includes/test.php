@@ -1,3 +1,11 @@
+<!---
+Joel Avery
+Andrew Danielson
+Tabark Kambal
+Gabriel Pedraza Torres
+CSD 460 - Software Development CAPSTONE
+--->
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data

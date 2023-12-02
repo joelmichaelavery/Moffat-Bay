@@ -1,3 +1,10 @@
+<!---
+Joel Avery
+Andrew Danielson
+Tabark Kambal
+Gabriel Pedraza Torres
+CSD 460 - Software Development CAPSTONE
+--->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
