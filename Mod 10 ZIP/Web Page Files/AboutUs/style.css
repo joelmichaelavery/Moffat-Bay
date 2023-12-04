@@ -1,0 +1,178 @@
+/*
+Joel Avery
+Andrew Danielson
+Tabark Kambal
+Gabriel Pedraza Torres
+CSD 460 - Software Development CAPSTONE
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Shadows+Into+Light&display=swap");
+
+
+:root {
+    --font-family: "Open Sans", sans-serif;
+    --sidebar-width: 35%;
+    --main-content-width: 65%;
+
+    --primary-hue: 270deg;
+    --primary-saturation: 5.5555555556%;
+    --primary-lightness: 7.0588235294%;
+
+    --prime-color: hsl(
+        var(--primary-hue),
+        var(--primary-saturation),
+        var(--primary-lightness)
+    );
+    --light-font-color: hsl(var(--primary-hue), var(--primary-saturation), 90%);
+    --body-bg: hsl(var(--primary-hue), var(--primary-saturation), 97%);
+    --font-color: hsl(var(--primary-hue), var(--primary-saturation), 13%);
+}
+
+
+
+main {
+    padding: 0;
+    margin: 0;
+    overflow-wrap: break-word;
+    font-family: var(--font-family);
+    color: var(--font-color);
+    background-color: var(--body-bg);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.contactus {
+    display: flex;
+}
+
+aside {
+    font-size: 0.938rem;
+    width: var(--sidebar-width);
+    height: 100vh;
+    overflow: hidden auto;
+    left: 0;
+    top: 0;
+    padding: 2rem 3rem;
+    background-color: var(--prime-color);
+    color: var(--light-font-color);
+}
+
+main {
+    order: 1;
+    width: var(--main-content-width);
+    padding: 2rem;
+}
+
+.sidebar p.desc {
+    margin-bottom: 40px;
+}
+
+.sidebar p {
+    color: hsl(var(--primary-hue), var(--primary-saturation), 60%);
+    margin-top: 0;
+}
+
+.sidebar h4 {
+    margin-bottom: 0;
+}
+
+.sidebar p span {
+    display: block;
+    padding: 10px 0;
+    color: var(--light-font-color);
+}
+
+.sidebar .item {
+    position: relative;
+    padding-left: 2.3rem;
+}
+
+.sidebar .icon {
+    position: absolute;
+    left: 0;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+section a {
+    font-weight: bold;
+}
+
+.contact-form-body form {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.contact-form-body form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.contact-form-body form label:first-child {
+    margin: 0;
+}
+.contact-form-body form textarea {
+    resize: vertical;
+    min-height: 15vh;
+}
+.contact-form-body form [type="submit"] {
+    all: unset;
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color: var(--prime-color);
+    color: var(--light-font-color);
+    cursor: pointer;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.contact-form-body form :is(textarea, input) {
+    padding: 0.5rem 0.7rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    border: 1px solid hsl(var(--primary-hue), var(--primary-saturation), 70%);
+    border-radius: 3px;
+    outline: none;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+    :root {
+        --sidebar-width: 40%;
+        --main-content-width: 60%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    :root {
+        --sidebar-width: 45%;
+        --main-content-width: 55%;
+    }
+}
+@media only screen and (max-width: 750px) {
+    :root {
+        --sidebar-width: 100%;
+        --main-content-width: 100%;
+    }
+    .contactus {
+        flex-direction: column;
+    }
+    .Contact {
+        order: 0;
+    }
+    aside {
+        position: inherit;
+        height: auto;
+    }
+    ul.social {
+        position: inherit;
+    }
+    .contact-form-body form {
+        max-width: 100%;
+    }
+}

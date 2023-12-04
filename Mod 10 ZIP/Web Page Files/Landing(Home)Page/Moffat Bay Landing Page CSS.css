@@ -1,0 +1,99 @@
+/*
+Joel Avery
+Andrew Danielson
+Tabark Kambal
+Gabriel Pedraza Torres
+CSD 460 - Software Development CAPSTONE
+*/
+body {
+            font-family: Arial, Garamond;
+            background-color: #374d37; /* Primary color of the page */ 
+            margin: 0;
+            padding: 0;
+        }
+        .Logo-Name {
+            font-family: 'Lora', serif;
+            color: tan;
+            text-align: center;    
+        }
+        .Landing-Page-Banner {
+            background-color: #41240d; /* To compliment the primary color */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .LogoName {
+            border-top: 0px;
+            font-size: 36px;
+        }
+        .Landing-Nav-Menu {
+            text-align: center;
+            width: 600px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: rgba(103, 170, 182, 0.5); /* RGBA color with 70% opacity */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+        }
+        .Landing-Nav-Menu h2 {
+            display:inline-block;
+            text-align: center;
+            margin-right: 20px;
+            padding: 0px;
+            margin-top: 10px;
+            color: #e9b45a;
+            text-decoration: underline;
+            
+        }
+        .Landing-Nav-Menu h2 a { /*PLEASE REVIEW WHEN LINK IS AVAILABLE */
+            text-decoration: none; /* Remove default underline on anchor */
+            color: #e9b45a; /* Set anchor text color */
+        }
+        
+        .Landing-Nav-Menu h2 a:hover { /*PLEASE REVIEW WHEN LINK IS AVAILABLE */
+            text-decoration: underline; /* Add underline on hover */
+            color: #FF5733; /* Change color on hover */
+        }
+        #Landing-Intro {
+            color: rgb(168, 255, 248);
+            text-align: center;
+            font-family: 'Lora', serif;
+            font-size: 20px;
+            padding: 10px;
+          }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            color:rgb(236, 200, 137);
+        }
+        .Landing-Page-Images-Container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .Landing-Page-pic-horizontal {
+            margin-right: 20px; /* Adjust the margin as needed */
+        }
+        
+        .Landing-Page-pic-1,
+        .Landing-Page-pic-2,
+        .Landing-Page-pic-3,
+        .Landing-Page-pic-4,
+        .Landing-Page-pic-5,
+        .Landing-Page-pic-6 {
+            max-width: 600px; /* Adjust the max-width as needed */
+            height: auto;
+            margin: 10px; /* Add some margin between the images */
+            border-radius: 10px;
+            opacity: 80%;   
+        }

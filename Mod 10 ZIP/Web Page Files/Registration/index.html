@@ -1,0 +1,52 @@
+<!---
+Joel Avery
+Andrew Danielson
+Tabark Kambal
+Gabriel Pedraza Torres
+CSD 460 - Software Development CAPSTONE
+--->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login And Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="logo">Moffat bay Lodge & Marina </h1>
+        <div class="links"></div>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>            
+            <li>
+                <a href="#">Your Reservation</a>
+            </li>
+    </div>
+    <div class="Registeration">
+        <div class="form-box">
+            <img src="/Media/Images/hikin.jpg" class="image" i>     
+       
+            <form id="Register" class="input-group" action="../database/MoffatBayDatabaseCreation.php" method="post">
+                <div class="input">MOFFAT BAY <br> REGISTRATION PAGE</div>    
+                <input type="text" name="FirstName" class="input-field" placeholder="FirstName" required>
+                <input type="text" name="LastName" class="input-field" placeholder="LastName" required>
+                <input type="email" name="email" class="input-field" placeholder="Email" required>
+                <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+                <input type="number" name="Telephone" class="input-field" placeholder="Enter Telephone Number" required>
+                <input type="text" name="StreetAddress" class="input-field" placeholder="StreetAddress" required>
+                <input type="text" name="City" class="input-field" placeholder="City" required>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
