@@ -6,65 +6,67 @@ Gabriel Pedraza Torres
 CSD 460 - Software Development CAPSTONE
 --->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login And Registration Page</title>
+    <title>Registration Page</title>
     <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-  <header class="Landing-Page-Banner">
-    <div class="Logo-Container">
-      <div class="Logo-Image-Left">
-        <img src="../../Media/Images/MoffatBayLogo.png" alt="Left Image">
-      </div>
-      <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
-      <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
-    </div>
-
-    
-    <div class="login-form">
-      <input type="email" class="login-input" placeholder="Email">
-      <input type="password" class="login-input" placeholder="Password">
-      <button class="login-button"><strong>Log In</strong></button>
-    </div>
-  </header>
-
-  <div class="Landing-Nav-Menu">
-    <a id="About Us Link" href="../AboutUs/AboutUs.html" target="_self">
-      <h2 id="About Us Label">About Us</h2>
-    </a>
-    
-    <a id ="Contact Us Link" href="../Activities/Activities.html" target="_self">
-      <h2 id="Activities Label">Activities</h2>
-    </a>
-    
-    <a id="Your Reservation Link" href="../Reservation lookup/Moffat Bay Reservation Look-up.html" target="_self">
-      <h2 id="Your Reservation Label">Reservations</h2>
-    </a>
-
-    <a id="Account Link" href="../Account/Account.html" target="_self">
-      <h2 id="Account">Account</h2>
-    </a>
-  </div>
-    <div class="Registeration">
-        <div class="form-box" >
-            <img src="hikin.jpg" class="image" i>     
-       
-            <form id="Register" class="input-group" action="test.php" method="post">
-                <div class="input">MOFFAT BAY <br> REGISTRATION PAGE</div>    
-                <input type="text" name="FirstName" class="input-field" placeholder="FirstName" required>
-                <input type="text" name="LastName" class="input-field" placeholder="LastName" required>
-                <input type="email" name="email" class="input-field" placeholder="Email" required>
-                <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
-                <input type="number" name="Telephone" class="input-field" placeholder="Enter Telephone Number" required>
-                <input type="text" name="StreetAddress" class="input-field" placeholder="StreetAddress" required>
-                <input type="text" name="City" class="input-field" placeholder="City" required>
-                <input type="text" name="State" class="input-field" placeholder="State" required> <!-- New input for State -->
-                <button type="submit" class="submit-btn">Sign Up</button>
-            </form>
+    <header class="Landing-Page-Banner">
+        <div class="Logo-Container">
+        <div class="Logo-Image-Left">
+            <img src="../../Media/Images/MoffatBayLogo.png" alt="Left Image">
         </div>
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+        <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
+        </div>
+
+        
+        <div class="login-form">
+        <input type="email" class="login-input" placeholder="Email">
+        <input type="password" class="login-input" placeholder="Password">
+        <button class="login-button"><strong>Log In</strong></button>
+        </div>
+    </header>
+
+  <div class="Landing-Nav-Menu" style="width: 800px;">
+		
+	<a id= "Home Link" href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" target="_self">
+    <h2 id="Home Label">Home</h2></a>
+
+    <a id= "About Us Link" href="../AboutUs/AboutUs.html" target="_self">
+    <h2 id="About Us Label">About Us</h2></a>
+    
+    <a id="Activities Link" href="../Activities/Activities.html" target="_self">
+	<h2 id="Activities Label">Activities</h2></a>
+    
+    <a id="Reservations Link" href="../Reservation Lookup/" target="_self">
+	<h2 id="Reservation Label">Reservations</h2></a>
+
+</div>
+
+<div class="Registeration">
+    <div class="form-box" >
+        <img src="hikin.jpg" class="image" i>     
+       
+        <form id="Register" class="input-group" action="test.php" method="post">
+            <div class="input">MOFFAT BAY <br> CUSTOMER REGISTRATION</div>    
+            <input type="text" name="FirstName" class="input-field" placeholder="FirstName" required>
+            <input type="text" name="LastName" class="input-field" placeholder="LastName" required>
+            <input type="email" name="email" class="input-field" placeholder="Email" required>
+            <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+            <input type="number" name="Telephone" class="input-field" placeholder="Enter Telephone Number" required>
+            <input type="text" name="StreetAddress" class="input-field" placeholder="StreetAddress" required>
+            <input type="text" name="City" class="input-field" placeholder="City" required>
+            <input type="text" name="State" class="input-field" placeholder="State" required>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
     </div>
 </div>
+
 <div style="text-align: center; margin-top: 20px;">
     <a href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" style="text-decoration: none;">
         <button style="padding: 10px 20px; font-size: 16px; background-color: #032e4f; color: #fff; border: none; cursor: pointer;">Back to Home Page</button>
@@ -87,6 +89,7 @@ CSD 460 - Software Development CAPSTONE
                 <li>Discover the beauty of Moffat Bay, where nature meets luxury.</li>
             </ul>
 
+
         </div>
         <div class="footer-section">
             <h3><a href="../Activities/Activities.html">Activities</a></h3>
@@ -105,8 +108,8 @@ CSD 460 - Software Development CAPSTONE
         <div class="footer-section">
             <h3>Account</h3>
             <ul>
-                <li><a href="../LoginPage/login.jsp">Login</a></li>
-                <li><a href="../Registration/includes/signupregistration.html">Create an Account</a></li>
+                <li><a href="../LoginPage/LoginServlet.java">Login</a></li>
+                <li><a href="../Registration/index.html">Create an Account</a></li>
             </ul>
         </div>
 
