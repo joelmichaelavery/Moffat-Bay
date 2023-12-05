@@ -20,25 +20,38 @@ CSD 460 - Software Development CAPSTONE
 <body>
 
     <header class="Landing-Page-Banner">
-        <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
-    </header>
+        <div class="Logo-Container">
+          <div class="Logo-Image-Left">
+            <img src="../Media/Images/MoffatBayLogo.png" alt="Left Image">
+          </div>
+          <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+          <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
+        </div>
+    
+        
+        <div class="login-form">
+          <input type="email" class="login-input" placeholder="Email">
+          <input type="password" class="login-input" placeholder="Password">
+          <button class="login-button"><strong>Log In</strong></button>
+        </div>
+      </header>
     
     <div class="Landing-Nav-Menu" style="width: 800px;">
 		
-	<a id= "Home Link" href="index.html" target="_self">
+	<a id= "Home Link" href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" target="_self">
     <h2 id="Home Label">Home</h2></a>
 
-    <a id= "About Us Link" href="AboutUs.html" target="_self">
+    <a id= "About Us Link" href="../AboutUs/AboutUs.html" target="_self">
     <h2 id="About Us Label">About Us</h2></a>
     
-    <a id="Activities Link" href="Activities.html" target="_self">
+    <a id="Activities Link" href="../Activities/Activities.html" target="_self">
 	<h2 id="Activities Label">Activities</h2></a>
     
-    <a id="Reservations Link" href="reservation.jsp" target="_self">
+    <a id="Reservations Link" href="../Reservation Lookup/" target="_self">
 	<h2 id="Reservation Label">Reservations</h2></a>
 	
 	<!-- Added the Create Account Link  -->
-	<a id="Create Account Link" href="login.jsp" target="_self">
+	<a id="Create Account Link" href="../LoginPage/login.jsp" target="_self">
 	<h2 id="Create Account Label">Account</h2></a>
 
 </div>
@@ -46,31 +59,21 @@ CSD 460 - Software Development CAPSTONE
     <div id="reservation-box">
         <h2>Reservation Lookup</h2>
         <p>Enter Your Reservation ID Number or Your Email Address</p>
-        <form method="POST" action="lookup.jsp" onsubmit="return validateForm()"> <!-- Submit form data to lookup.php -->
+        <form method="POST" action="../LoginPage/login.jsp" onsubmit="return validateForm()"> <!-- Submit form data to lookup.php -->
             <input type="text" name="reservation_number" id="reservation_number" placeholder="Reservation Number" />
             <input type="email" name="email" id="email"  placeholder="Email Address" />
             <button type="submit"><strong>Submit</strong></button>
         </form>
     </div>
-    
-    <script>
-		function validateForm() {
-			var reservationNumber = document.getElementById('reservation_number').value; 
-			var emailAddress = document.getElementById('email').value; 
-			
-			if (reservationNumber.trim() === '' && emailAddress.trim() === ''){
-				alert('Please enter either a reservation number or an email address to look up your reservation.'); 
-				return false; //Prevent form submission. 
-			}
-			
-			return true; //Allow form submission
-		}
-	</script>
-	</div>
-<div style="text-align: center; position: absolute; bottom: 16%;">
-    <a href="index.html" style="text-decoration: none;">
-        <button style="padding: 10px 20px; font-size: 16px; background-color: #032e4f; color: #fff; border: none; cursor: pointer;">Back to Home Page</button>
+</body>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+    <a href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" style="text-decoration: none; display: inline-block;">
+        <button style="padding: 10px 20px; font-size: 16px; background-color: #032e4f; color: #fff; border: none; cursor: pointer; max-width: 200px; width: 100%;">Back to Home Page</button>
     </a>
+</div>
+
 </div>
 <footer> 
     <div class="footer-content">
@@ -109,7 +112,7 @@ CSD 460 - Software Development CAPSTONE
             <h3>Account</h3>
             <ul>
                 <li><a href="../LoginPage/LoginServlet.java">Login</a></li>
-                <li><a href="signupregistration.html">Create an Account</a></li>
+                <li><a href="../Registration/index.html">Create an Account</a></li>
             </ul>
         </div>
 
@@ -120,3 +123,16 @@ CSD 460 - Software Development CAPSTONE
 </footer>
 </body>
 </html>
+<script>
+    function validateForm() {
+        var reservationNumber = document.getElementById('reservation_number').value; 
+        var emailAddress = document.getElementById('email').value; 
+        
+        if (reservationNumber.trim() === '' && emailAddress.trim() === ''){
+            alert('Please enter either a reservation number or an email address to look up your reservation.'); 
+            return false; //Prevent form submission. 
+        }
+        
+        return true; //Allow form submission
+    }
+</script>
