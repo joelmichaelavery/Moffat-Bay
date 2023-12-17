@@ -11,7 +11,7 @@ CSD 460 - Software Development CAPSTONE
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Landing(Home)Page/Moffat Bay Landing Page CSS.css">
+  <link rel="stylesheet" href="Moffat Bay Landing Page CSS.css">
   <title>Moffat Bay - Welcome!</title>
   <style>
     body {
@@ -24,13 +24,16 @@ CSD 460 - Software Development CAPSTONE
       min-height: 100vh;
       flex: 1;
     }
-
+    main {
+      flex: 1;
+}
     footer {
       background-color: #001F3F;
       color: white;
       padding: 5px 0;
       text-align: center;
       width: 100%;
+      position: relative;
     }
 
     .footer-content {
@@ -94,12 +97,40 @@ CSD 460 - Software Development CAPSTONE
       color: white;
     }
 
-    .Landing-Page-Images-Container {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      margin-bottom: 50px;
-    }
+.Landing-Page-Images-Container {
+  position: relative;
+  height: 600px; /* Set a fixed height for the container */
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  margin:0 auto; 
+  width: 50%;
+}
+
+.Landing-Page-Images-Container img {
+  max-width: 100%;
+  height: 550px;
+  display: inline-block;
+}
+
+.Landing-Page-pic {
+  position: absolute;
+  border-radius: 10px; /* Set the border-radius for rounded edges */
+  align-items: center;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.Landing-Page-pic:first-child {
+  opacity: 1;
+}
 
     .Logo-Name {
       font-family: 'Lora', serif;
@@ -119,10 +150,10 @@ CSD 460 - Software Development CAPSTONE
     }
 
     .Logo-Image-Left img {
-      width: 60px;
-      height: 60px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .LogoName {
@@ -195,56 +226,11 @@ CSD 460 - Software Development CAPSTONE
       border-radius: 5px;
       cursor: pointer;
     }
-    .activity-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    .activity {
-      width: auto;
-      margin: 10px;
-      text-align: center;
-      background-color: #fff; /* White activity cards */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    
-    .Logo-Name {
-      font-family: 'Lora', serif;
-      color: tan;
-      text-align: center;    
-    }
-
-    .Landing-Page-Banner {
-      background-color: #41240d;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-
-    .Logo-Image-Left img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin-bottom: 5px;
-    }
-
-    .LogoName {
-      border-top: 0px;
-      font-size: 36px;
-    }
-
   </style>
 </head>
 <body>
   <header class="Landing-Page-Banner">
-       <div class="Logo-Container">
+    <div class="Logo-Container">
       <div class="Logo-Image-Left">
         <img src="https://cdn.discordapp.com/attachments/1156321354669379707/1179795154899578895/MoffatBayLogo.png?ex=657b14dc&is=65689fdc&hm=72905f0998b9a603ed913c58680cf9699de5a8afc4a250510f934b4ead4c2fd9&" alt="Left Image">
       </div>
@@ -253,7 +239,7 @@ CSD 460 - Software Development CAPSTONE
     </div>
 
     
-    <div class="login-form">
+     <div class="login-form">
     	<form action="http://localhost:8080/MoffatBay2/login" method="post">
         <input type="email" name="username" class="login-input" placeholder="Email">
         <input type="password" name="password" class="login-input" placeholder="Password">
@@ -263,13 +249,12 @@ CSD 460 - Software Development CAPSTONE
   </header>
 
   <div class="Landing-Nav-Menu">
-	  
-	  <a id="Home link" href="../Landing Page/index.html" target="_self">
-          <h2 id="Home Label">Home</h2>
-        </a>
-	  
     <a id="About Us Link" href="../AboutUs/AboutUs.html" target="_self">
       <h2 id="About Us Label">About Us</h2>
+    </a>
+    
+    <a id ="Contact Us Link" href="../Activities/Activities.html" target="_self">
+      <h2 id="Activities Label">Activities</h2>
     </a>
     
     <a id="Your Reservation Link" href="../Registration/reservation.jsp" target="_self">
@@ -281,57 +266,41 @@ CSD 460 - Software Development CAPSTONE
     </a>
   </div>
 
-<div class="activity-container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <div class="activity" style="width:50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/moran_state_park_orcas_island_robert_harrison_6-2800x800.jpg" alt="Hiking" style="max-width: 100%; height: auto;">
-        <h2>Hiking</h2>
-        <p>Embark on a journey through the picturesque landscapes of the Pacific Northwest. Explore rugged trails that lead to awe-inspiring views of the sea, majestic mountains, and lush valleys, creating an unforgettable hiking experience.</p>
-    </div>     
-        
-    <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-    <img src="../Media/Images/Kayaking3.jpg" alt="Kayaking" style="max-width: 100%; height: auto;">
-        <h2>Kayaking</h2>
-        <p>Embark on an unforgettable adventure as you paddle the pristine waters of Puget Sound. Keep your eyes peeled, for you might just find yourself face-to-face with our resident orca whales.</p>
-    </div>
-    
-    <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-    <img src="../Media/Images/scuba.jpg" alt="Scuba" style="max-width: 100%; height: auto;">
-        <h2>Scuba Diving</h2>
-        <p>Descend beneath the waves to explore the hidden wonders of the Sound. Encounter playful sea otters, graceful harbor seals, mysterious octopuses, and a host of other aquatic marvels in their natural habitat.</p>
-    </div>
-    
-    <!--<div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/Horse2.jpg" alt="Horse Back Riding" style="max-width: 100%; height: auto;">
-        <h2>Horseback Riding</h2>
-        <p>If the water isn't your domain, saddle up and embark on a guided horseback journey across our majestic island. Experience the serenity and beauty of our island on horseback.</p>
-    </div> -->
+  <div class="Landing-Page-Intro-Text">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+    <h2 id="Landing-Intro">
+      <p>Connect with the beauty of balance.</p>
+      <p>Nestled in the heart of nature's beauty, Moffat Bay Lodge & Marina is your gateway to an unforgettable escape.</p>
+      <p>Whether you're seeking a tranquil retreat, thrilling outdoor adventures, or simply a peaceful lakeside getaway, our pristine wilderness location has it all.</p>
+    </h2>
+  </div>
 
-    <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/Orcas.jpg" alt="Orcas" style="max-width: 100%; height: auto;">
-        <h2>Whale Watching</h2>
-        <p>Set sail on an unforgettable voyage to witness the majestic marine life of Puget Sound and the Pacific. Depending on the season, you may spot humpback whales, gray whales, minke whales, and the awe-inspiring orca whales up close.</p>
-    </div>
+  <main class="content">
+    <div class="Landing-Page-Images-Container">
+      <div id ="slideshow" class="Landing-Page-Images-Container">
+        <img class="Landing-Page-pic Landing-Page-pic-1" src="https://ssl.tzoo-img.com/images/blog/2019/9/24/Lake-Coeur-d'Alene-Idaho-iStock-505413264.jpg?width=412&spr=3" alt="Landing-Page-pic-1">
+        <img class="Landing-Page-pic Landing-Page-pic-2" src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_4500,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/The_Spa_dhz4en.jpg" alt="Landing-Page-pic-2">
+        <img class="Landing-Page-pic Landing-Page-pic-3" src="https://tuckerharrisoninn.com/wp-content/uploads/2022/07/shutterstock_691702915.jpg" alt="Landing-Page-pic-3">
+        <img class="Landing-Page-pic Landing-Page-pic-4" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Five-Pine-Lodge.jpg" alt="Landing-Page-pic-4">
+        <img class="Landing-Page-pic Landing-Page-pic-5" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Shore-Lodge.png" alt="Landing-Page-pic-5">
+        <img class="Landing-Page-pic Landing-Page-pic-6" src="https://waggonerguide.com/wp-content/uploads/2021/03/Kwatsi-BO-e1617133112388.jpg" alt="Landing-Page-pic-6">
+      </div>
+
+  
     
-   <!-- <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/Biking.jpg" alt="Biking" style="max-width: 100%; height: auto;">
-        <h2>Cycling</h2>
-        <p>If you prefer to stay on land, hop on a road bike for a leisurely ride around our island. For a more adventurous experience, take a mountain bike to explore breathtaking trails with stunning views at every turn.</p>
-    </div>-->
-    
-    <!--<div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/Airplane.jpg" alt="Float Plane" style="max-width: 100%; height: auto;">
-        <h2>Air Tours</h2>
-        <p>Climb aboard a floatplane for a thrilling aerial adventure that provides a unique perspective of Puget Sound. Soar high above the island, taking in breathtaking panoramic views guided by an experienced pilot.</p>
-    </div> -->
-    
-</body>
-</div>
-<div style="text-align: center; margin-top: 20px;">
-    <a href="../Landing Page/index.html" style="text-decoration: none;">
-        <button style="padding: 10px 20px; font-size: 16px; background-color: #032e4f; color: #fff; border: none; cursor: pointer;">Back to Home Page</button>
-    </a>
-</div>
-<footer>
+      <div id="slideshow2" class="Landing-Page-Images-Container">
+        <!-- Duplicate the same images for the second slideshow -->
+        <img class="Landing-Page-pic Landing-Page-pic-4" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Five-Pine-Lodge.jpg" alt="Landing-Page-pic-4">
+        <img class="Landing-Page-pic Landing-Page-pic-5" src="https://www.emeraldpalate.com/wp-content/uploads/2023/05/Best-Pacific-Northwest-Resorts-Shore-Lodge.png" alt="Landing-Page-pic-5">
+        <img class="Landing-Page-pic Landing-Page-pic-6" src="https://waggonerguide.com/wp-content/uploads/2021/03/Kwatsi-BO-e1617133112388.jpg" alt="Landing-Page-pic-6">
+        <img class="Landing-Page-pic Landing-Page-pic-1" src="https://ssl.tzoo-img.com/images/blog/2019/9/24/Lake-Coeur-d'Alene-Idaho-iStock-505413264.jpg?width=412&spr=3" alt="Landing-Page-pic-1">
+        <img class="Landing-Page-pic Landing-Page-pic-2" src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_4500,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/The_Spa_dhz4en.jpg" alt="Landing-Page-pic-2">
+        <img class="Landing-Page-pic Landing-Page-pic-3" src="https://tuckerharrisoninn.com/wp-content/uploads/2022/07/shutterstock_691702915.jpg" alt="Landing-Page-pic-3">
+      </div>
+  </div>
+</main>
+
+  <footer>
     <div class="footer-content">
       <div class="footer-section-info">
         <p>88 Moffat Loop,
@@ -375,8 +344,43 @@ CSD 460 - Software Development CAPSTONE
     <div class="footer-bottom">
       <p>&copy; 2023 Moffat Bay Resort | <a href="../AboutUs/AboutUs.html">About Us</a> | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy.</p>
     </div>
-  </footer>
+  </footer> 
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get the image container and all images
+    const slideshow = document.getElementById('slideshow');
+    const images = slideshow.getElementsByClassName('Landing-Page-pic');
+
+    // Set the index of the current image
+    let currentIndex = 0;
+
+    // Function to show the next image
+    function showNextImage() {
+      images[currentIndex].style.opacity = 0;
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.opacity = 1;
+    }
+
+    // Set an interval to switch images every 6 seconds
+    setInterval(showNextImage, 6000);
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slideshow2 = document.getElementById('slideshow2');
+    const images2 = slideshow2.getElementsByClassName('Landing-Page-pic');
+    let currentIndex2 = 0;
+
+    function showNextImage2() {
+      images2[currentIndex2].style.opacity = 0;
+      currentIndex2 = (currentIndex2 + 1) % images2.length;
+      images2[currentIndex2].style.opacity = 1;
+    }
+
+    setInterval(showNextImage2, 5000); // You can adjust the interval for the second slideshow
+  });
+</script>
+
 </html>
-
-

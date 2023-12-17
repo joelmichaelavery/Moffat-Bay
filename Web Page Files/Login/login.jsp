@@ -1,20 +1,28 @@
-<!--
+<%-- 
 Joel Avery
 Andrew Danielson
 Tabark Kambal
 Gabriel Pedraza Torres
 CSD 460 - Software Development CAPSTONE
--->
+ --%>
 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Landing(Home)Page/Moffat Bay Landing Page CSS.css">
-  <title>Moffat Bay - Welcome!</title>
-  <style>
-    body {
+
+<style>
+
+	/*
+Joel Avery
+Andrew Danielson
+Tabark Kambal
+Gabriel Pedraza Torres
+CSD 460 - Software Development CAPSTONE
+*/
+
+@charset "UTF-8"; 
+
+
+body {
       font-family: Arial, Garamond;
       background-color: #374d37;
       margin: 0;
@@ -25,12 +33,14 @@ CSD 460 - Software Development CAPSTONE
       flex: 1;
     }
 
-    footer {
+footer {
       background-color: #001F3F;
       color: white;
       padding: 5px 0;
       text-align: center;
       width: 100%;
+      bottom:0; 
+      position: fixed;
     }
 
     .footer-content {
@@ -169,6 +179,7 @@ CSD 460 - Software Development CAPSTONE
       padding: 10px;
     }
 
+
     /* New styles for login form */
     .login-form {
       position: absolute;
@@ -195,29 +206,124 @@ CSD 460 - Software Development CAPSTONE
       border-radius: 5px;
       cursor: pointer;
     }
-    .activity-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    .activity {
-      width: auto;
-      margin: 10px;
-      text-align: center;
-      background-color: #fff; /* White activity cards */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    
-    .Logo-Name {
+
+
+.login-container .create-account a:visited {
+	color: white; 
+	text-align: center;
+}
+
+.login-container .create-account {
+	text-align: center;
+	
+}
+
+.login-container .create-account a {
+	color: white; 
+}
+
+
+
+
+/* Style the login container */
+.login-container {
+    border: 2px solid #000;
+    padding: 20px;
+    background-image: url(../Login/MoffatBayDeer.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 450px;
+    height: 480px;
+    border-radius: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-shadow: -3px 3px black;
+}
+
+/* Style the login container heading */
+.login-container h1 {
+    color: ghostwhite;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 32pt;
+}
+
+/* Style the username input */
+.login-container #username {
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: -3px, 3px black;
+    width: 75%;
+    height: 40px;
+    font-size: 16pt;
+    padding-left: 20px;
+}
+
+/* Style the password input */
+.login-container #password {
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: -5px, 5px black;
+    width: 75%;
+    height: 40px;
+    margin-top: 5%;
+    font-size: 16pt;
+    padding-left: 20px;
+}
+
+/* Style the form within the login container */
+.login-container form {
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #e9b45a;
+    border: 1pt solid black;
+    box-shadow: -3px 3px;
+    width: 50%;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 5%;
+    font-size: 16pt;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+}
+
+/* Style text input placeholders */
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: rgba(169, 169, 169, 1.0);
+    text-align: left;
+    padding-left: 25px;
+}
+
+/* Style the welcome message */
+.welcome-container h1 {
+    color: white;
+    text-align: center;
+}
+
+/* Style error messages */
+.error {
+    color: red;
+    font-size: 18pt;
+    text-align: center;
+}
+
+.Logo-Name {
       font-family: 'Lora', serif;
       color: tan;
       text-align: center;    
     }
 
-    .Landing-Page-Banner {
+.Landing-Page-Banner {
       background-color: #41240d;
       color: #fff;
       text-align: center;
@@ -228,41 +334,39 @@ CSD 460 - Software Development CAPSTONE
       position: relative;
     }
 
-    .Logo-Image-Left img {
+.Logo-Image-Left img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       margin-bottom: 5px;
     }
 
-    .LogoName {
+.LogoName {
       border-top: 0px;
       font-size: 36px;
     }
+	
 
-  </style>
+</style>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <!-- Link to an external stylesheet for styling -->
+    <!-- <link href="login.css" type="text/css" rel="stylesheet" />-->
 </head>
 <body>
-  <header class="Landing-Page-Banner">
-       <div class="Logo-Container">
+    <header class="Landing-Page-Banner">
+    <div class="Logo-Container">
       <div class="Logo-Image-Left">
         <img src="https://cdn.discordapp.com/attachments/1156321354669379707/1179795154899578895/MoffatBayLogo.png?ex=657b14dc&is=65689fdc&hm=72905f0998b9a603ed913c58680cf9699de5a8afc4a250510f934b4ead4c2fd9&" alt="Left Image">
       </div>
       <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
       <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
     </div>
-
+    </header>
     
-    <div class="login-form">
-    	<form action="http://localhost:8080/MoffatBay2/login" method="post">
-        <input type="email" name="username" class="login-input" placeholder="Email">
-        <input type="password" name="password" class="login-input" placeholder="Password">
-        <button type="submit" class="login-button"><strong>Log In</strong></button>
-    	</form>
-	</div>
-  </header>
-
-  <div class="Landing-Nav-Menu">
+   <div class="Landing-Nav-Menu">
 	  
 	  <a id="Home link" href="../Landing Page/index.html" target="_self">
           <h2 id="Home Label">Home</h2>
@@ -272,61 +376,45 @@ CSD 460 - Software Development CAPSTONE
       <h2 id="About Us Label">About Us</h2>
     </a>
     
+    <a id="Activities Link" href="../Activities/Activities.html" target="_self">
+      <h2 id="Activities Label">Activities</h2>
+    </a>
+    
     <a id="Your Reservation Link" href="../Registration/reservation.jsp" target="_self">
       <h2 id="Your Reservation Label">Reservations</h2>
     </a>
 
-    <a id="Account Link" href="../Login/login.jsp" target="_self">
-      <h2 id="Account">Account</h2>
-    </a>
   </div>
 
-<div class="activity-container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <div class="activity" style="width:50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/moran_state_park_orcas_island_robert_harrison_6-2800x800.jpg" alt="Hiking" style="max-width: 100%; height: auto;">
-        <h2>Hiking</h2>
-        <p>Embark on a journey through the picturesque landscapes of the Pacific Northwest. Explore rugged trails that lead to awe-inspiring views of the sea, majestic mountains, and lush valleys, creating an unforgettable hiking experience.</p>
-    </div>     
+    <!-- Login container section -->
+    <div class="login-container" style="background-image: url('<%= request.getContextPath() %>/Login/MoffatBayDeer.jpeg');">
+        <h1>Login to Account</h1>
+        <form action="<%=request.getContextPath()%>/login" method="post">
+            <!-- Input fields for username and password -->
+            <label for="username"></label>
+            <input type="text" name="username" id="username" required placeholder="Email-Address"><br><br><br>
+    
+            <label for="password"></label>
+            <input type="password" name="password" id="password" required placeholder="Password"><br><br>
+            
+            <!-- Submit button to submit the form -->
+            <input type="submit" value="Submit">
+       
+        </form>
+       
         
-    <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-    <img src="../Media/Images/Kayaking3.jpg" alt="Kayaking" style="max-width: 100%; height: auto;">
-        <h2>Kayaking</h2>
-        <p>Embark on an unforgettable adventure as you paddle the pristine waters of Puget Sound. Keep your eyes peeled, for you might just find yourself face-to-face with our resident orca whales.</p>
-    </div>
-    
-    <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-    <img src="../Media/Images/scuba.jpg" alt="Scuba" style="max-width: 100%; height: auto;">
-        <h2>Scuba Diving</h2>
-        <p>Descend beneath the waves to explore the hidden wonders of the Sound. Encounter playful sea otters, graceful harbor seals, mysterious octopuses, and a host of other aquatic marvels in their natural habitat.</p>
-    </div>
-    
-    <!--<div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/Horse2.jpg" alt="Horse Back Riding" style="max-width: 100%; height: auto;">
-        <h2>Horseback Riding</h2>
-        <p>If the water isn't your domain, saddle up and embark on a guided horseback journey across our majestic island. Experience the serenity and beauty of our island on horseback.</p>
-    </div> -->
+        <c:if test="${not empty requestScope.error}">
+            <!-- Display an error message if the "error" attribute in the request scope is not empty -->
+            <p class="error">${requestScope.error}</p>
+        </c:if>
+        
+        <div class="create-account">
+    		<a href="../Registration/includes/signupregistration.html">Sign Up Today!</a>
+		</div>
 
-    <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/Orcas.jpg" alt="Orcas" style="max-width: 100%; height: auto;">
-        <h2>Whale Watching</h2>
-        <p>Set sail on an unforgettable voyage to witness the majestic marine life of Puget Sound and the Pacific. Depending on the season, you may spot humpback whales, gray whales, minke whales, and the awe-inspiring orca whales up close.</p>
     </div>
     
-   <!-- <div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/Biking.jpg" alt="Biking" style="max-width: 100%; height: auto;">
-        <h2>Cycling</h2>
-        <p>If you prefer to stay on land, hop on a road bike for a leisurely ride around our island. For a more adventurous experience, take a mountain bike to explore breathtaking trails with stunning views at every turn.</p>
-    </div>-->
-    
-    <!--<div class="activity" style="width: 50%; margin: 10px; text-align: center;">
-        <img src="../Media/Images/Airplane.jpg" alt="Float Plane" style="max-width: 100%; height: auto;">
-        <h2>Air Tours</h2>
-        <p>Climb aboard a floatplane for a thrilling aerial adventure that provides a unique perspective of Puget Sound. Soar high above the island, taking in breathtaking panoramic views guided by an experienced pilot.</p>
-    </div> -->
-    
-</body>
-</div>
-<div style="text-align: center; margin-top: 20px;">
+<div style="text-align: center; position: absolute; bottom: 16%; margin-left: 46%; ">
     <a href="../Landing Page/index.html" style="text-decoration: none;">
         <button style="padding: 10px 20px; font-size: 16px; background-color: #032e4f; color: #fff; border: none; cursor: pointer;">Back to Home Page</button>
     </a>
@@ -375,8 +463,7 @@ CSD 460 - Software Development CAPSTONE
     <div class="footer-bottom">
       <p>&copy; 2023 Moffat Bay Resort | <a href="../AboutUs/AboutUs.html">About Us</a> | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy.</p>
     </div>
-  </footer>
+  </footer>	
 </body>
+
 </html>
-
-

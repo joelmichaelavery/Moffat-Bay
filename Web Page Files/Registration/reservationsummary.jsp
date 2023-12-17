@@ -276,16 +276,16 @@ footer {
 
   <div class="Landing-Nav-Menu" style="width: 800px;">
 		
-	<a id= "Home Link" href="../../Landing Page/index.html" target="_self">
+	<a id= "Home Link" href="../Landing Page/index.html" target="_self">
     <h2 id="Home Label">Home</h2></a>
 
-    <a id= "About Us Link" href="../../AboutUs/AboutUs.html" target="_self">
+    <a id= "About Us Link" href="../AboutUs/AboutUs.html" target="_self">
     <h2 id="About Us Label">About Us</h2></a>
     
-    <a id="Activities Link" href="../../Activities/Activities.html" target="_self">
+    <a id="Activities Link" href="../Activities/Activities.html" target="_self">
 	<h2 id="Activities Label">Activities</h2></a>
     
-    <a id="Reservations Link" href="../../Registration/reservation.jsp" target="_self">
+    <a id="Reservations Link" href="../Registration/reservation.jsp" target="_self">
 	<h2 id="Reservation Label">Reservations</h2></a>
 
 </div>

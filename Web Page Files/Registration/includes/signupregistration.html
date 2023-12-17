@@ -1,10 +1,10 @@
-<!---
+<!--
 Joel Avery
 Andrew Danielson
 Tabark Kambal
 Gabriel Pedraza Torres
 CSD 460 - Software Development CAPSTONE
---->
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,24 +26,26 @@ CSD 460 - Software Development CAPSTONE
 
         
         <div class="login-form">
-        <input type="email" class="login-input" placeholder="Email">
-        <input type="password" class="login-input" placeholder="Password">
-        <button class="login-button"><strong>Log In</strong></button>
-        </div>
+    	<form action="http://localhost:8080/MoffatBay2/login" method="post">
+        <input type="email" name="username" class="login-input" placeholder="Email">
+        <input type="password" name="password" class="login-input" placeholder="Password">
+        <button type="submit" class="login-button"><strong>Log In</strong></button>
+    	</form>
+	</div>
     </header>
 
   <div class="Landing-Nav-Menu" style="width: 800px;">
 		
-	<a id= "Home Link" href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" target="_self">
+	<a id= "Home Link" href="../../Landing Page/index.html" target="_self">
     <h2 id="Home Label">Home</h2></a>
 
-    <a id= "About Us Link" href="../AboutUs/AboutUs.html" target="_self">
+    <a id= "About Us Link" href="../../AboutUs/AboutUs.html" target="_self">
     <h2 id="About Us Label">About Us</h2></a>
     
-    <a id="Activities Link" href="../Activities/Activities.html" target="_self">
+    <a id="Activities Link" href="../../Activities/Activities.html" target="_self">
 	<h2 id="Activities Label">Activities</h2></a>
     
-    <a id="Reservations Link" href="../Reservation Lookup/" target="_self">
+    <a id="Reservations Link" href="../../Registration/reservation.jsp" target="_self">
 	<h2 id="Reservation Label">Reservations</h2></a>
 
 </div>
@@ -52,7 +54,7 @@ CSD 460 - Software Development CAPSTONE
     <div class="form-box" >
         <img src="hikin.jpg" class="image" i>     
        
-        <form id="Register" class="input-group" action="test.php" method="post">
+        <form id="Register" class="input-group" action="http://localhost/test.php" method="post">
             <div class="input">MOFFAT BAY <br> CUSTOMER REGISTRATION</div>    
             <input type="text" name="FirstName" class="input-field" placeholder="FirstName" required>
             <input type="text" name="LastName" class="input-field" placeholder="LastName" required>
@@ -68,7 +70,7 @@ CSD 460 - Software Development CAPSTONE
 </div>
 
 <div style="text-align: center; margin-top: 20px;">
-    <a href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" style="text-decoration: none;">
+    <a href="../../Landing Page/index.html" style="text-decoration: none;">
         <button style="padding: 10px 20px; font-size: 16px; background-color: #032e4f; color: #fff; border: none; cursor: pointer;">Back to Home Page</button>
     </a>
 </div>
@@ -84,7 +86,7 @@ CSD 460 - Software Development CAPSTONE
 
         <div class="footer-section">
 
-            <h3><a href="../AboutUs/AboutUs.html">About Us</a></h3>
+            <h3><a href="../../AboutUs/AboutUs.html">About Us</a></h3>
             <ul>
                 <li>Discover the beauty of Moffat Bay, where nature meets luxury.</li>
             </ul>
@@ -92,25 +94,25 @@ CSD 460 - Software Development CAPSTONE
 
         </div>
         <div class="footer-section">
-            <h3><a href="../Activities/Activities.html">Activities</a></h3>
+            <h3><a href="../../Activities/Activities.html">Activities</a></h3>
             <ul>
                 <li>Check Out What We have to Offer!</li>
 
             </ul>
         </div>
         <div class="footer-section">
-            <h3>Reservations</h3>
+            <h3><a href="../../Registration/reservation.jsp">Reservations</a></h3>
             <ul>
-                <li><a href="../RoomReservation/">Book Now</a></li>
-                <li><a href="../Reservation lookup/Moffat Bay Reservation Look-up.html">Reservation Look up</a></li>
+                <li><a href="../../Registration/reservation.jsp">Book Now</a></li>
+                <li><a href="../../Reservation Lookup/ReservationLookUp.html">Reservation Look up</a></li>
             </ul>
         </div>
         <div class="footer-section">
-            <h3>Account</h3>
-            <ul>
-                <li><a href="../LoginPage/LoginServlet.java">Login</a></li>
-                <li><a href="../Registration/index.html">Create an Account</a></li>
-            </ul>
+            <h3><a href="../../Login/login.jsp">Account</a></h3>
+        <ul>
+          	<li><a href="../../Login/login.jsp">Login</a></li>
+          	<li><a href="../../Registration/includes/signupregistration.html">Create an Account</a></li>
+        </ul>
         </div>
 
     </div>

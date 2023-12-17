@@ -7,241 +7,230 @@ CSD 460 - Software Development CAPSTONE
 */
 
 
-body {
-  font-family: Arial, Garamond;
-  background-color: #374d37; /* Primary color of the page */ 
-  margin: 0;
-  padding: 0;
-}
-header {
-  background-color: #0f3f0f; /* Dark green, reminiscent of forests */
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-h1 {
-font-size: 2.75rem;
-  text-align: center;
-  margin: 0;
-}
+  footer {
+      background-color: #001F3F;
+      color: white;
+      padding: 5px 0;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
 
-.Landing-Page-Images-Container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-}
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-.Logo-Name {
-  font-family: 'Lora', serif;
-  color: tan;
-  text-align: center;    
-}
+    .footer-section-info,
+    .footer-section {
+      box-sizing: border-box;
+      text-align: center;
+      width: 100%;
+      max-width: 20%;
+      margin-bottom: 20px;
+    }
 
-.Landing-Page-Banner {
-  background-color: #41240d;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
+    .footer-section h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-decoration: underline;
+      color: #87CEEB;
+    }
 
-.Logo-Image-Left img {
-  width: 225px;
-  height: 225px;
-  margin-bottom: 10px;
-}
+    .footer-section p {
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-align: left;
+      color: white;
+    }
 
-.LogoName {
-  border-top: 0px;
-  font-size: 36px;
-}
+    .footer-section ul li {
+      margin-bottom: 10px;
+      text-align: left;
+      color: white;
+    }
 
-.Landing-Nav-Menu {
-  text-align: center;
-  width: 600px;
-  height: 50px;
-  margin: 20px auto;
-  background-color: rgba(103, 170, 182, 0.5);
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  align-items: center;
-}
+    .footer-section ul li a {
+      color: white;
+      text-align: left;
+      text-decoration: none;
+    }
 
-.Landing-Nav-Menu h2 {
-  display:inline-block;
-  text-align: center;
-  margin-right: 20px;
-  padding: 0px;
-  margin-top: 10px;
-  color: #e9b45a;
-  text-decoration: underline;
-}
+    .footer-section a {
+      text-decoration: underline;
+      color: #87CEEB;
+    }
 
-.Landing-Nav-Menu h2 a {
-  text-decoration: none;
-  color: #e9b45a;
-}
+    .footer-bottom {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #555;
+    }
 
-.Landing-Nav-Menu h2 a:hover {
-  text-decoration: underline;
-  color: #FF5733;
-}
+    .footer-bottom p {
+      font-size: 10px;
+      color: white;
+    }
+    
+    .footer-bottom a {
+		color:  #87CEEB;
+	}
 
-#Landing-Intro {
-  color: #e9b45a;
-  text-align: center;
-  font-family: 'Lora', serif;
-  font-size: 20px;
-  padding: 10px;
-}
-
-/* New styles for login form */
-.login-form {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: clear;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.login-input {
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 1px solid #e9b45a;
-  border-radius: 5px;
-  width: 100px;
-}
-
-.login-button {
-  background-color: rgba(103, 170, 182, 0.5);
-  color: white;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-footer {
-  background-color: #001F3F;
-  color: white;
-  padding: 5px 0;
-  text-align: center;
-  width: 100%;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.footer-section-info,
-.footer-section {
-  box-sizing: border-box;
-  text-align: center;
-  width: 100%;
-  max-width: 20%;
-  margin-bottom: 20px;
-}
-
-.footer-section h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-decoration: underline;
-  color: #87CEEB;
-}
-
-.footer-section p {
-  font-size: 12px;
-  margin-bottom: 10px;
-  text-align: left;
-  color: white;
-}
-
-.footer-section ul li {
-  margin-bottom: 10px;
-  text-align: left;
-  color: white;
-}
-
-.footer-section ul li a {
-  color: white;
-  text-align: left;
-  text-decoration: none;
-}
-
-.footer-section a {
-  text-decoration: underline;
-  color: #87CEEB;
-}
-
-.footer-bottom {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #555;
-}
-
-.footer-bottom p {
-  font-size: 10px;
-  color: white;
-}
-
-
- #reservation-box {
-  background-image: url('https://waggonerguide.com/wp-content/uploads/2021/02/desolation-sound-toba-w-marina-docks-large.jpg');
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  width: 600px;
-  height: 500px; 
-  padding: 20px;
-  color: #e9b45a;
-  margin: 5% auto; /* Add margin to separate from the banner */
-  }
+ 
+ body {
+            font-family: Arial, Garamond;
+            background-color: #374d37; /* Primary color of the page */ 
+            margin: 0;
+            padding: 0;
+        }
+        .Logo-Name {
+            font-family: 'Lora', serif;
+            color: tan;
+            text-align: center;    
+        }
+        .Landing.Page.Banner {
+            background-color: #41240d; /* To compliment the primary color */
+            color: #fff;
+            text-align: left;
+            padding: 20px;
+            position: absolute; 
+        }
+        .LogoName {
+            border-top: 0px;
+            font-size: 36px;
+        }
+        .Landing-Nav-Menu {
+            text-align: center;
+            width: 600px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: rgba(103, 170, 182, 0.5); /* RGBA color with 70% opacity */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+        }
+        .Landing-Nav-Menu h2 {
+            display:inline-block;
+            text-align: center;
+            margin-right: 20px;
+            padding: 0px;
+            margin-top: 10px;
+            color: #e9b45a;
+            text-decoration: underline;
+            
+        }
+        .Landing-Nav-Menu h2 a { /*PLEASE REVIEW WHEN LINK IS AVAILABLE */
+            text-decoration: none; /* Remove default underline on anchor */
+            color: #e9b45a; /* Set anchor text color */
+        }
         
-  #reservation-box h2{
-    margin-top: 25%;
-    text-align: center;
-    margin-bottom: 0px; 
-	}
+        .Landing-Nav-Menu h2 a:hover { /*PLEASE REVIEW WHEN LINK IS AVAILABLE */
+            text-decoration: underline; /* Add underline on hover */
+            color: #FF5733; /* Change color on hover */
+        }
+        #Landing-Intro {
+            color: rgb(168, 255, 248);
+            text-align: center;
+            font-family: 'Lora', serif;
+            font-size: 20px;
+            padding: 10px;
+          }
+
+    
+        
+        .Logo-Name {
+          font-family: 'Lora', serif;
+          color: tan;
+          text-align: center;
+        }
+        
+	    #Landing-Intro {
+	      color: tan;
+	      text-align: center;
+	      font-family: 'Lora', serif;
+	    }
+	    
 		
-	#reservation-box p{
-	  text-align: center; 
-	}
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Garamond;
+            background-color: #374d37; /* Primary color of the page */ 
+        }
 
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    }
+        .Landing-Page-Banner {
+            background-color: #41240d; /* To compliment the primary color */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width:100%; 
+            height: 100px; 
+        }
 
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #41240d; /* Complimentary color to the body */
-    color: #2980b9; /* Contrasting color to the button background */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Lora', serif;
-    }
+        .Logo-Name {
+            font-family: 'Lora', serif;
+            color: tan;
+            text-align: center;    
+        }
 
-  button:hover {
-    background-color: #2980b9;
-    color: #fff;
-    }
+        #reservation-box {
+            background-image: url('https://waggonerguide.com/wp-content/uploads/2021/02/desolation-sound-toba-w-marina-docks-large.jpg');
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 600px;
+            height: 500px; 
+            padding: 20px;
+            color: #e9b45a;
+            margin-top: 5%; /* Add margin to separate from the banner */
+        }
+        
+         
+        
+        #reservation-box h2{
+			margin-top: 25%;
+			text-align: center;
+			margin-bottom: 0px; 
+		}
+		
+		#reservation-box p{
+			text-align: center; 
+		}
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #41240d; /* Complimentary color to the body */
+            color: #2980b9; /* Contrasting color to the button background */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Lora', serif;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            color: #fff;
+            
+        }
    
         
        

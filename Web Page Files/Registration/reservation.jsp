@@ -391,21 +391,21 @@ footer {
    <div class="grid-container">
         <div class="image-container">
             <div class="sub-box1">
-                <img src="cabin1.webp" style="max-width: 900px; max-height: 800px;" alt="Cabin Image">
+                <img src="hotel.jpg" style="max-width: 900px; max-height: 800px;" alt="Cabin Image">
             </div>
         </div>
         <div class="image-container-right">
             <div class="sub-box">
-                <img src="cabin2.webp" alt="Image 2">
+                <img src="kingRoom.jpg" alt="Image 2">
             </div>
             <div class="sub-box">
-                <img src="cabin3.webp" alt="Image 3">
+                <img src="doubleQueen.jpg" alt="Image 3">
             </div>
             <div class="sub-box">
-                <img src="cabin4.webp" alt="Image 4">
+                <img src="bathroom.jpg" alt="Image 4">
             </div>
             <div class="sub-box">
-                <img src="cabin5.webp" alt="Image 5">
+                <img src="suite.jpg" alt="Image 5">
             </div>
         </div>
     </div>
@@ -421,6 +421,7 @@ footer {
 		</div>
     	
     </div>
+    
     
     <!-- Add hidden input fields to store selected dates -->
 	<input type="hidden" id="checkinDate" name="checkinDate">
@@ -507,30 +508,35 @@ footer {
         return priceData[roomType];
     }
 	
- // Function to check if the user is logged in
-    function checkLoggedIn() {
-        // Assume you have a variable or function to check the user's login status
-        // For example, you might have a variable named 'isLoggedIn'
-        if (!isLoggedIn) {
-            // User is not logged in, display a popup asking them to log in
-            alert("Please log in first to reserve a room.");
-            return false; // Prevent form submission
-        }
-        return true; // Allow form submission if the user is logged in
+    function checkLoggedIn(callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/checkSession', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var response = JSON.parse(xhr.responseText);
+                if(response.loggedIn) {
+                    callback(true);
+                } else {
+                    alert("Please log in first to reserve a room.");
+                    callback(false);
+                }
+            }
+        };
+        xhr.send();
     }
 
-    // Modify the form submission logic to include the login check
+    // Usage:
     document.getElementById("bookingForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default form submission
 
-        // Check if the user is logged in before allowing reservation
-        var loggedIn = checkLoggedIn();
-        if (loggedIn) {
-            // If logged in, proceed with the reservation
-            calculateTotal(); // Calculate total price (if needed)
-            this.submit(); // Submit the form
-        }
+        checkLoggedIn(function(isLoggedIn) {
+            if(isLoggedIn) {
+                calculateTotal(); // Calculate total price
+                document.getElementById("bookingForm").submit(); // Submit the form
+            }
+        });
     });
+
 
     
     // Function to calculate the total price and set selected dates

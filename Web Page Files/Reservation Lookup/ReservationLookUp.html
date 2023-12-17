@@ -1,13 +1,245 @@
-<!---
+<!--
 Joel Avery
 Andrew Danielson
 Tabark Kambal
 Gabriel Pedraza Torres
 CSD 460 - Software Development CAPSTONE
---->
+-->
 
 <!DOCTYPE html>
 <html lang="en">
+	<style>
+		body {
+    font-family: Arial, Garamond;
+    background-color: #374d37; /* Primary color of the page */ 
+    margin: 0;
+    padding: 0;
+  }
+ header {
+    background-color: #0f3f0f; /* Dark green, reminiscent of forests */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+  font-size: 2.75rem;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .Landing-Page-Images-Container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  
+  .Logo-Name {
+    font-family: 'Lora', serif;
+    color: tan;
+    text-align: center;    
+  }
+  
+  .Landing-Page-Banner {
+    background-color: #41240d;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .Logo-Image-Left img {
+    width: 225px;
+    height: 225px;
+    margin-bottom: 10px;
+  }
+  
+  .LogoName {
+    border-top: 0px;
+    font-size: 36px;
+  }
+  
+  .Landing-Nav-Menu {
+    text-align: center;
+    width: 800px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: rgba(103, 170, 182, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+  }
+  
+  .Landing-Nav-Menu h2 {
+    display:inline-block;
+    text-align: center;
+    margin-right: 20px;
+    padding: 0px;
+    margin-top: 10px;
+    color: #e9b45a;
+    text-decoration: underline;
+  }
+  
+  .Landing-Nav-Menu h2 a {
+    text-decoration: none;
+    color: #e9b45a;
+  }
+  
+  .Landing-Nav-Menu h2 a:hover {
+    text-decoration: underline;
+    color: #FF5733;
+  }
+  
+  #Landing-Intro {
+    color: #e9b45a;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  /* New styles for login form */
+  .login-form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: clear;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .login-input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #e9b45a;
+    border-radius: 5px;
+    width: 100px;
+  }
+  
+  .login-button {
+    background-color: rgba(103, 170, 182, 0.5);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+/* Style for Confirm Reservation button */
+    .button-container form input[type="submit"] {
+        border-radius: 25px;
+        cursor: pointer;
+        margin-bottom: 10px; /* Reduce vertical margin */
+        background-color: #e9b45a;
+	    border: 1pt solid black;
+	    box-shadow: -3px 3px;
+	    width: 10%;
+	    height: 50px;
+	    border-radius: 25px;
+	    margin-top: 5%;
+	    font-size: 16pt;
+    }
+
+    /* Style for Cancel Reservation button */
+    .cancel form input[type="submit"] {
+        border-radius: 25px;
+        cursor: pointer;
+        margin-bottom: 10px; /* Reduce vertical margin */
+        background-color:red;
+	    border: 1pt solid black;
+	    box-shadow: -3px 3px;
+	    width: 10%;
+	    height: 50px;
+	    border-radius: 25px;
+	    margin-top: 4%;
+	    font-size: 16pt;
+    }
+.submit-btn :hover{
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px black;
+    color: gold;
+}
+
+footer {
+    background-color: #001F3F;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section-info,
+  .footer-section {
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    max-width: 20%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #87CEEB;
+  }
+  
+  .footer-section p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: white;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+    text-align: left;
+    color: white;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  .footer-section a {
+    text-decoration: underline;
+    color: #87CEEB;
+  }
+  
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+  }
+  
+  .footer-bottom p {
+    font-size: 10px;
+    color: white;
+  }
+  
+  .reservation-summary {
+	  color: white; 
+	  text-align: center;
+	  margin-top: 3%;
+  }
+		
+	</style>
+	</style>
 <head>
     <link rel="stylesheet" href="Lookup.css">
     <meta charset="UTF-8">
@@ -21,45 +253,51 @@ CSD 460 - Software Development CAPSTONE
 
     <header class="Landing-Page-Banner">
         <div class="Logo-Container">
-          <div class="Logo-Image-Left">
-            <img src="../Media/Images/MoffatBayLogo.png" alt="Left Image">
-          </div>
-          <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
-          <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
+        <div class="Logo-Image-Left">
+            
         </div>
-    
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+        <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
+        </div>
+
         
         <div class="login-form">
-          <input type="email" class="login-input" placeholder="Email">
-          <input type="password" class="login-input" placeholder="Password">
-          <button class="login-button"><strong>Log In</strong></button>
-        </div>
-      </header>
-    
-    <div class="Landing-Nav-Menu" style="width: 800px;">
-		
-	<a id= "Home Link" href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" target="_self">
-    <h2 id="Home Label">Home</h2></a>
+    	<form action="http://localhost:8080/MoffatBay2/login" method="post">
+        <input type="email" name="username" class="login-input" placeholder="Email">
+        <input type="password" name="password" class="login-input" placeholder="Password">
+        <button type="submit" class="login-button"><strong>Log In</strong></button>
+    	</form>
+	</div>
+    </header>
 
-    <a id= "About Us Link" href="../AboutUs/AboutUs.html" target="_self">
-    <h2 id="About Us Label">About Us</h2></a>
+  <div class="Landing-Nav-Menu">
+		
+        <a id="Home Page" href="../Landing Page/index.html" target="_self">
+          <h2 id="Home">Home</h2>
+        </a>
+
+        <a id="About Us Link" href="../AboutUs/AboutUs.html" target="_self">
+          <h2 id="About Us Label">About Us</h2>
+        </a>
+        
+        <a id ="Contact Us Link" href="../Activities/Activities.html" target="_self">
+          <h2 id="Activities Label">Activities</h2>
+        </a>
+        
+        <a id="Your Reservation Link" href="../Registration/reservation.jsp" target="_self">
+          <h2 id="Your Reservation Label">Reservations</h2>
+        </a>
     
-    <a id="Activities Link" href="../Activities/Activities.html" target="_self">
-	<h2 id="Activities Label">Activities</h2></a>
-    
-    <a id="Reservations Link" href="../Reservation Lookup/" target="_self">
-	<h2 id="Reservation Label">Reservations</h2></a>
-	
-	<!-- Added the Create Account Link  -->
-	<a id="Create Account Link" href="../LoginPage/login.jsp" target="_self">
-	<h2 id="Create Account Label">Account</h2></a>
+        <a id="Account Link" href="../Account/Account.html" target="_self">
+          <h2 id="Account">Account</h2>
+          </a>
 
 </div>
 
     <div id="reservation-box">
         <h2>Reservation Lookup</h2>
         <p>Enter Your Reservation ID Number or Your Email Address</p>
-        <form method="POST" action="../LoginPage/login.jsp" onsubmit="return validateForm()"> <!-- Submit form data to lookup.php -->
+        <form method="post" action="lookup.jsp">
             <input type="text" name="reservation_number" id="reservation_number" placeholder="Reservation Number" />
             <input type="email" name="email" id="email"  placeholder="Email Address" />
             <button type="submit"><strong>Submit</strong></button>
@@ -68,7 +306,7 @@ CSD 460 - Software Development CAPSTONE
 </body>
 </div>
 
-<div style="text-align: center; margin-top: 20px;">
+<div style="text-align: center; margin-top: 9%;">
     <a href="../Landing(Home)Page/Moffat Bay Landing Page HTML.html" style="text-decoration: none; display: inline-block;">
         <button style="padding: 10px 20px; font-size: 16px; background-color: #032e4f; color: #fff; border: none; cursor: pointer; max-width: 200px; width: 100%;">Back to Home Page</button>
     </a>

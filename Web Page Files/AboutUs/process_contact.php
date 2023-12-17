@@ -153,7 +153,7 @@ CSD 460 - Software Development CAPSTONE
             echo "<p>Message: $message</p>";
 
             // Sending an email
-            $to = "tabarakkambal@gmail.com"; // Replace this with your email
+            $to = "joelmichaelavery@gmail.com"; // Replace this with your email
             $subject = "New Contact Form Submission";
             $email_body = "Name: $name\nEmail: $email\nPhone Number: $tel_no\n\nMessage:\n$message";
 
@@ -168,7 +168,7 @@ CSD 460 - Software Development CAPSTONE
             echo "<h2>No form submission detected.</h2>";
         }
         ?>
-        <a href="/ABOUTUS/AboutUs.html">Return To Previous Page</a>
+        <a href="http://localhost:8080/MoffatBay2/AboutUs/AboutUs.html">Return To Previous Page</a>
     </div>
 
 </body>

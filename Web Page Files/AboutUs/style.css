@@ -7,6 +7,196 @@ CSD 460 - Software Development CAPSTONE
 */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Shadows+Into+Light&display=swap");
 
+        body {
+            font-family: Arial, Garamond;
+            background-color: #374d37; /* Primary color of the page */ 
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0f3f0f; /* Dark green, reminiscent of forests */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.75rem;
+            text-align: center;
+
+        }
+
+        h3 {
+            font-size: 36px;
+            text-align: center;
+
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffe4b5; /* Light tan reminiscent of sand and wood */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #001F3F;
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+            width: 100%;
+          }
+      
+          .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+      
+          .footer-section-info,
+          .footer-section {
+            box-sizing: border-box;
+            text-align: center;
+            width: 100%;
+            max-width: 20%;
+            margin-bottom: 20px;
+          }
+      
+          .footer-section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+            color: #87CEEB;
+          }
+      
+          .footer-section p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            text-align: left;
+            color: white;
+          }
+      
+          .footer-section ul li {
+            margin-bottom: 10px;
+            text-align: left;
+            color: white;
+          }
+      
+          .footer-section ul li a {
+            color: white;
+            text-align: left;
+            text-decoration: none;
+          }
+      
+          .footer-section a {
+            text-decoration: underline;
+            color: #87CEEB;
+          }
+      
+          .footer-bottom {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #555;
+          }
+      
+          .footer-bottom p {
+            font-size: 10px;
+            color: white;
+          }
+          .Logo-Name {
+            font-family: 'Lora', serif;
+            color: tan;
+            text-align: center;    
+          }
+      
+          .Landing-Page-Banner {
+            background-color: #41240d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+          }
+      
+          .Logo-Image-Left img {
+            width: 225px;
+            height: 225px;
+            margin-bottom: 10px;
+          }
+      
+          .LogoName {
+            border-top: 0px;
+            font-size: 36px;
+          }
+      
+          .Landing-Nav-Menu {
+            text-align: center;
+            width: 650px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: rgba(103, 170, 182, 0.5);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+          }
+      
+          .Landing-Nav-Menu h2 {
+            display:inline-block;
+            text-align: center;
+            margin-right: 20px;
+            padding: 0px;
+            margin-top: 10px;
+            color: #e9b45a;
+            text-decoration: underline;
+          }
+      
+          .Landing-Nav-Menu h2 a {
+            text-decoration: none;
+            color: #e9b45a;
+          }
+      
+          .Landing-Nav-Menu h2 a:hover {
+            text-decoration: underline;
+            color: #FF5733;
+          }
+      
+
+          /* New styles for login form */
+          .login-form {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: clear;
+            padding: 20px;
+            border-radius: 10px;
+          }
+      
+          .login-input {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #e9b45a;
+            border-radius: 5px;
+            width: 100px;
+          }
+      
+          .login-button {
+            background-color: rgba(103, 170, 182, 0.5);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
 
 :root {
     --font-family: "Open Sans", sans-serif;
@@ -43,6 +233,8 @@ main {
 
 .contactus {
     display: flex;
+    margin-right: 200px; /* Adjust this value to add a right margin */
+    
 }
 
 aside {
@@ -50,9 +242,9 @@ aside {
     width: var(--sidebar-width);
     height: 100vh;
     overflow: hidden auto;
-    left: 0;
+    margin-left: 200px; /* Adjust this value to add margin on the left */
     top: 0;
-    padding: 2rem 3rem;
+    padding: 2rem;
     background-color: var(--prime-color);
     color: var(--light-font-color);
 }
@@ -164,10 +356,16 @@ section a {
     }
     .Contact {
         order: 0;
+        margin-right: 0; /* Reset margin for smaller screens */
+        
+    }
+    main {
+        order: 1;
+        width: var(--main-content-width);
     }
     aside {
-        position: inherit;
-        height: auto;
+        width: 100%;
+        margin-left: 0; /* Reset margin for smaller screens */
     }
     ul.social {
         position: inherit;

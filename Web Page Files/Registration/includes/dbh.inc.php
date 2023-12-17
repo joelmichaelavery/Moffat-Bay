@@ -1,7 +1,7 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=MoffitBayLodge";
-$dbusername = "root";
-$dbpassword = "";
+$dsn = "mysql:host=localhost;port=3306;dbname=MoffitBayLodge";
+$dbusername = "student1";
+$dbpassword = "pass";
 
 try {
     $pdo = new PDO($dsn, $dbusername, $dbpassword);

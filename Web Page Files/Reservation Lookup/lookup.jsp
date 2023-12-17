@@ -1,3 +1,8 @@
+<%@ page import="java.sql.*" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" %>
+<%@ page errorPage="" %>
+
 <!---
 Joel Avery
 Andrew Danielson
@@ -5,14 +10,238 @@ Tabark Kambal
 Gabriel Pedraza Torres
 CSD 460 - Software Development CAPSTONE
 --->
-<?php
-
-<%@ page import="java.sql.*" %>
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page language="java" %>
-<%@ page errorPage="" %>
 
 <!DOCTYPE html>
+<style>
+    body {
+      font-family: Arial, Garamond;
+      background-color: #374d37;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      flex: 1;
+    }
+
+    footer {
+      background-color: #001F3F;
+      color: white;
+      padding: 5px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-section-info,
+    .footer-section {
+      box-sizing: border-box;
+      text-align: center;
+      width: 100%;
+      max-width: 20%;
+      margin-bottom: 20px;
+    }
+
+    .footer-section h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-decoration: underline;
+      color: #87CEEB;
+    }
+
+    .footer-section p {
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-align: left;
+      color: white;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+      text-align: left;
+      color: white;
+    }
+
+    .footer-section ul li a {
+      color: white;
+      text-align: left;
+      text-decoration: none;
+    }
+
+    .footer-section a {
+      text-decoration: underline;
+      color: #87CEEB;
+    }
+
+    .footer-bottom {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #555;
+    }
+
+    .footer-bottom p {
+      font-size: 10px;
+      color: white;
+    }
+
+    .Landing-Page-Images-Container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .Logo-Name {
+      font-family: 'Lora', serif;
+      color: tan;
+      text-align: center;    
+    }
+
+    .Landing-Page-Banner {
+      background-color: #41240d;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .Logo-Image-Left img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .LogoName {
+      border-top: 0px;
+      font-size: 36px;
+    }
+
+    .Landing-Nav-Menu {
+      text-align: center;
+      width: 800px;
+      height: 50px;
+      margin: 20px auto;
+      background-color: rgba(103, 170, 182, 0.5);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      align-items: center;
+    }
+
+    .Landing-Nav-Menu h2 {
+      display:inline-block;
+      text-align: center;
+      margin-right: 20px;
+      padding: 0px;
+      margin-top: 25px;
+      color: #e9b45a;
+      text-decoration: underline;
+    }
+
+    .Landing-Nav-Menu h2 a {
+      text-decoration: none;
+      color: #e9b45a;
+    }
+
+    .Landing-Nav-Menu h2 a:hover {
+      text-decoration: underline;
+      color: #FF5733;
+    }
+
+    #Landing-Intro {
+      color: #e9b45a;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    /* New styles for login form */
+    .login-form {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: clear;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px; 
+    }
+
+    .login-input {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #e9b45a;
+      border-radius: 5px;
+      width: 100px;
+    }
+
+    .login-button {
+      background-color: rgba(103, 170, 182, 0.5);
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100px; 
+    }
+    .activity-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .activity {
+      width: auto;
+      margin: 10px;
+      text-align: center;
+      background-color: #fff; /* White activity cards */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    .Logo-Name {
+      font-family: 'Lora', serif;
+      color: tan;
+      text-align: center;    
+    }
+
+    .Landing-Page-Banner {
+      background-color: #41240d;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .Logo-Image-Left img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 5px;
+    }
+
+    .LogoName {
+      border-top: 0px;
+      font-size: 36px;
+    }
+
+  </style>
 <html lang="en">
 <head> 
     <link rel="stylesheet" href="Lookup.css">
@@ -22,32 +251,43 @@ CSD 460 - Software Development CAPSTONE
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
 </head>
 <body>
-    <header class="Landing-Page-Banner">
-        <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
-    </header>
-    
-    <div class="Landing-Nav-Menu" style="width: 800px;">
-        <a id="Home Link" href="index.html" target="_self">
-            <h2 id="Home Label">Home</h2>
-        </a>
-
-        <a id="About Us Link" href="AboutUs.html" target="_self">
-            <h2 id="About Us Label">About Us</h2>
-        </a>
-    
-        <a id="Activities Link" href="Activities.html" target="_self">
-            <h2 id="Activities Label">Activities</h2>
-        </a>
-    
-        <!-- Reservations Link  -->
-        <a id="Reservations Link" href="reservation.jsp" target="_self">
-            <h2 id="Reservations Label">Reservations</h2>
-        </a>
-        
-        <a id="Account Link" href="login.jsp" target="_self">
-            <h2 id="Account Label">Account</h2>
-        </a>
+     <header class="Landing-Page-Banner">
+       <div class="Logo-Container">
+      <div class="Logo-Image-Left">
+        <img src="https://cdn.discordapp.com/attachments/1156321354669379707/1179795154899578895/MoffatBayLogo.png?ex=657b14dc&is=65689fdc&hm=72905f0998b9a603ed913c58680cf9699de5a8afc4a250510f934b4ead4c2fd9&" alt="Left Image">
+      </div>
+      <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+      <h1 class="Logo-Name">Moffat Bay Lodge & Marina</h1>
     </div>
+
+    
+    <div class="login-form">
+    	<form action="http://localhost:8080/MoffatBay2/login" method="post">
+        <input type="email" name="username" class="login-input" placeholder="Email">
+        <input type="password" name="password" class="login-input" placeholder="Password">
+        <button type="submit" class="login-button"><strong>Log In</strong></button>
+    	</form>
+	</div>
+  </header>
+
+  <div class="Landing-Nav-Menu">
+	  
+	<a id= "Home Link" href="../Landing Page/index.html"target="_self">
+    <h2 id="Home Label">Home</h2></a>
+
+    <a id= "About Us Link" href="../AboutUs/AboutUs.html" target="_self">
+    <h2 id="About Us Label">About Us</h2></a>
+    
+    <a id="Activities Link" href="../Activities/Activities.html" target="_self">
+	<h2 id="Activities Label">Activities</h2></a>
+    
+    <a id="Reservations Link" href="../Registration/reservation.jsp" target="_self">
+	<h2 id="Reservation Label">Reservations</h2></a>
+	
+	<a id="Create Account Link" href="../Login/login.jsp" target="_self">
+	<h2 id="Create Account Label">Account</h2></a>
+	
+  </div>
 
     <div class="output">
         <%
@@ -94,7 +334,7 @@ CSD 460 - Software Development CAPSTONE
                 if (rs.next()) {
         %>
                     <!-- Display reservation or booking information -->
-                    <div style="color: white; font-size: large;">
+                    <div style="color: white; font-size: large; margin-top:50%;">
                         <p>Reservation Number: <%= rs.getString("ReservationNumber") %></p>
                         <p>Room Booked: <%= rs.getString("RoomType") %></p>
                         <p>Number of Guests: <%= rs.getInt("NumOfGuests") %></p>
